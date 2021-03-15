@@ -19,9 +19,18 @@ namespace Homework1
             void Task1()
             {
                 Console.WriteLine("Введите число месяца");
-                int num = int.Parse(Console.ReadLine());
+                int num = int.Parse(Console.ReadLine())-1;
                 string[] month = new string[] { "Январь", "Ферваль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" };
-                Console.WriteLine($"Название месяца: {month[num - 1]}");
+                if(num > 11)
+                {
+                    Console.WriteLine("Месяцев всего 12!");
+                }
+                else
+                {
+                    Console.WriteLine($"Название месяца: {month[num]}");
+                }
+                Console.ReadKey();
+                
             }
 
             void Task2()
