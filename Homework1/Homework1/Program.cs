@@ -49,7 +49,7 @@ namespace Homework1
                         case "в": x += 1; break;
                     }
                 }
-                double hypotenuse = Math.Sqrt(x * x * y * y);
+                double hypotenuse = Math.Sqrt(x * x + y * y);
                 if (hypotenuse == 0)
                 {
                     if (x == 0)
