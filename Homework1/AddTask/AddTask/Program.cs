@@ -13,7 +13,6 @@ namespace AddTask
         {
             Console.Clear();
             Console.OutputEncoding = System.Text.Encoding.Unicode;
-            Console.WriteLine("V\u0305  V\u203E");
             Console.WriteLine("Введите номер задания");
             Console.WriteLine("1 - шахматная доска");
             Console.WriteLine("2 - конвертер из арабских в римские цифры");
