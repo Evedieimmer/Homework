@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
+
+
+
 namespace AddTask
 {
     class Program
@@ -9,6 +12,8 @@ namespace AddTask
         static void Main()
         {
             Console.Clear();
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            Console.WriteLine("V\u0305  V\u203E");
             Console.WriteLine("Введите номер задания");
             Console.WriteLine("1 - шахматная доска");
             Console.WriteLine("2 - конвертер из арабских в римские цифры");
@@ -23,7 +28,13 @@ namespace AddTask
             {
                 Console.WriteLine("Введите число, которое нужно конвертировать");
                 Dictionary<int, string> ra = new Dictionary<int, string>
-                {   { 1000, "M" }, { 900, "CM" }, { 500, "D" },
+                {   { 1000000, "M\u203E" },{ 900000, "C\u203EM\u203E" },
+                    { 500000, "D\u203E" },{ 400000, "C\u203ED\u203E" },
+                    { 100000, "C\u203E" },{ 90000, "X\u203EC\u203E" },
+                    { 50000, "L\u203E" },{ 40000, "X\u203EL\u203E" },
+                    { 10000, "X\u203E" },{ 9000, "MX\u203E" },
+                    { 5000, "V\u203E" },{ 4000, "MV\u203E" },
+                    { 1000, "M" }, { 900, "CM" }, { 500, "D" },
                     { 400, "CD" },{ 100, "C" },{ 90 , "XC" },
                     { 50 , "L" },  { 40 , "XL" },  { 10 , "X" },
                     { 9  , "IX" },  { 5  , "V" },  { 4  , "IV" },  { 1  , "I" } };
