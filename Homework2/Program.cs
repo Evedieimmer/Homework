@@ -8,17 +8,21 @@ namespace Homework2
     {
         static void Main()
         {
+            Console.Clear();
             Console.WriteLine("Введите номер задания");
             Console.WriteLine("1 - поиск уникального элемента");
             Console.WriteLine("2 - поиск уникального элемента(чисто на linq)");
-            Console.WriteLine("3 - симматричная матрица");
+            Console.WriteLine("3 - симметричная матрица");
             var chose = int.Parse(Console.ReadLine());
             switch (chose)
             {
                 case 1: UniqNum(); break;
                 case 2: Unique(); break;
                 case 3: Matrix(); break;
-                default: Console.WriteLine("Ошибка, вы неправильно ввели номер!"); break;
+                default: Console.WriteLine("Ошибка, вы неправильно ввели номер!");
+                    Console.WriteLine("Нажмите enter, чтобы вернутся в меню");
+                    Console.ReadKey();
+                    CloseOrMenu(); ; break;
             }
 
             //задание № 1 - весь запрос на linq
@@ -28,6 +32,8 @@ namespace Homework2
                 Console.WriteLine("Введите элементы массива через пробел:");
                 int nunu = Console.ReadLine().Split(" ").Select(x => x).Distinct().OrderBy(x => x).Count();
                 Console.WriteLine($"Kоличество уникальных значений: {nunu}");
+                Console.ReadKey();
+                CloseOrMenu();
             }
 
             //задание № 1 - через циклы и linq
@@ -52,12 +58,15 @@ namespace Homework2
                 }
                 Console.WriteLine();
                 Console.WriteLine($"количество уникальных значений: { uniqNumber.Length }");
+                Console.ReadKey();
+                CloseOrMenu();
             }
 
             // задание № 2 - зеркалим матрицы
             //сложность: O(n2) — квадратичная сложность
             void Matrix() 
             {
+                Console.WriteLine("Введите размерность, а затем элементы матрицы через пробел:");
                 string[] numbers = Console.ReadLine().Split(" ");
                 int size = int.Parse(numbers[0]);
                 int x = 1;
@@ -81,9 +90,9 @@ namespace Homework2
                     }
                 }
                 if (count == size * size)
-                { Console.WriteLine("daaa"); }
+                { Console.WriteLine("Матрица симметричная"); }
                 else
-                { Console.WriteLine("neee"); }
+                { Console.WriteLine("Матрица несимметричная"); }
 
                 Console.WriteLine();
                 for (int i = 0; i < size; i++)
@@ -102,6 +111,24 @@ namespace Homework2
                         Console.Write(transposedMatrix[i, j] + "\t");
                     }
                     Console.WriteLine();
+                }
+                Console.ReadKey();
+                CloseOrMenu();
+            }
+
+            void CloseOrMenu()
+            {
+                Console.Clear();
+                Console.WriteLine("Чтобы вернутся в меню, нажми 1 \n" +
+                    "Чтобы закрыть приложение нажми любую клавишу и enter");
+                try
+                {
+                    int press = int.Parse(Console.ReadLine());
+                    if (press == 1) { Main(); }
+                }
+                catch
+                {
+                    Console.Out.Close();
                 }
             }
 
