@@ -183,15 +183,24 @@ namespace Homework3
                 }
                 int summ = 0;
                 int i = 0;
-                while (summ < timeWork)
-                {
-                    summ = summ + timeVisitList[i];
-                    i++;
+                try {
+                    while (summ < timeWork)
+                    {
+                        summ = summ + timeVisitList[i];
+                        i++;
+                    }
+                    Console.WriteLine($"Количество не обслуженных посетителей: {visitors - i}");
+                    Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
+                    Console.ReadKey();
+                    Main();
                 }
-                Console.WriteLine($"Количество не обслуженных посетителей: {visitors - i}");
-                Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
-                Console.ReadKey();
-                Main();
+                catch {
+                    Console.WriteLine($"Все клиенты обслужены, сегодня работники почты могут уйти домой пораньше :)");
+                    Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
+                    Console.ReadKey();
+                    Main();
+                }
+                
             }
 
         }
