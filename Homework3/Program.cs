@@ -168,41 +168,72 @@ namespace Homework3
 
             void PostTime()
             {
+                //Console.WriteLine("Введите время работы почты в минутах");
+                //int timeWork = int.Parse(Console.ReadLine());
+                //Console.WriteLine("Введите количество посетителей");
+                //int visitors = int.Parse(Console.ReadLine());
+                //var timeVisitList = new List<int>();
+                //Console.WriteLine("Введите время обслуживания");
+                //int j = 1;
+                //while (j <= visitors)
+                //{
+                //    Console.Write($"{j}-го посетителя:");
+                //    timeVisitList.Add(int.Parse(Console.ReadLine()));
+                //    j++;
+                //}
+                //int summ = 0;
+                //int i = 0;
+                //try {
+                //    while (summ < timeWork)
+                //    {
+                //        summ = summ + timeVisitList[i];
+                //        i++;
+                //    }
+                //    Console.WriteLine($"Количество не обслуженных посетителей: {visitors - i}");
+                //    Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
+                //    Console.ReadKey();
+                //    Main();
+                //}
+                //catch {
+                //    Console.WriteLine($"Все клиенты обслужены, сегодня работники почты могут уйти домой пораньше :)");
+                //    Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
+                //    Console.ReadKey();
+                //    Main();
+                //}
                 Console.WriteLine("Введите время работы почты в минутах");
                 int timeWork = int.Parse(Console.ReadLine());
                 Console.WriteLine("Введите количество посетителей");
                 int visitors = int.Parse(Console.ReadLine());
-                var timeVisitList = new List<int>();
+                Queue<int> timeVisitQueue = new Queue<int>();
                 Console.WriteLine("Введите время обслуживания");
                 int j = 1;
                 while (j <= visitors)
                 {
                     Console.Write($"{j}-го посетителя:");
-                    timeVisitList.Add(int.Parse(Console.ReadLine()));
+                    timeVisitQueue.Enqueue(int.Parse(Console.ReadLine()));
                     j++;
                 }
                 int summ = 0;
-                int i = 0;
-                try {
+                try
+                {
                     while (summ < timeWork)
                     {
-                        summ = summ + timeVisitList[i];
-                        i++;
+                        summ = timeVisitQueue.Dequeue() + summ;
                     }
-                    Console.WriteLine($"Количество не обслуженных посетителей: {visitors - i}");
+
+                    Console.WriteLine($"Количество не обслуженных посетителей: {timeVisitQueue.Count}");
                     Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
                     Console.ReadKey();
                     Main();
                 }
-                catch {
+                catch
+                {
                     Console.WriteLine($"Все клиенты обслужены, сегодня работники почты могут уйти домой пораньше :)");
                     Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
                     Console.ReadKey();
                     Main();
                 }
-                
             }
-
         }
     }
 }
