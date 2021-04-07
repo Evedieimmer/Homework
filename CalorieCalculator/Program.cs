@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CalorieCalculator
 {
@@ -7,48 +8,136 @@ namespace CalorieCalculator
 
         static void Main()
         {
+            Dictionary<string, int> productCalorieIn100g = new Dictionary<string, int>
+                {{ "молоко 3.5% ", 63 },
+                { "яблоко", 52 },
+                { "кофе черный с сахаром", 16 },
+                { "лапша", 137 },
+                { "брокколи", 34 },
+                { "картофель отваренный", 87 },
+                { "картофель жаренный", 149 },
+                { "сметана 10%", 117 },
+                { "майонез", 390 },
+                { "чай с сахаром", 20 }};
+            Dictionary<string, int> UserMenu = new Dictionary<string, int> { };
+            Console.Clear();
             Console.WriteLine("Приветствуем тебя в калькуляторе калорий!");
-            Console.WriteLine("Для начала расскажи немного о себе!");
 
-            Console.WriteLine("Введи свое имя:");
-            string nameUser = Console.ReadLine();
+            // BMI - body mass index (индекс массы тела)
+            // BMR - basal metabolic rate (кол-во калорий для норм. функционированния организма)
+            double bmr;
+            string error = "\r\nВы ошиблись при вводе, попробуй снова";
+            string nameUser;
+            double ageUser;
+            double weightUser;
+            double heightUser;
+            string gender = "";
+            double lifeStyle = 0;
 
-            Console.WriteLine("Свой возраст:");
-            double ageUser = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Свой вес:");
-            double weightUser = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Свой рост в см:");
-            double heightUser = Convert.ToDouble(Console.ReadLine());
-            heightUser = heightUser/100.0;
-
-            Console.WriteLine("Выбери свой пол:");
-            Console.WriteLine("(1) - мужской");
-            Console.WriteLine("(2) - женский");
+            Console.WriteLine("Что будем делать?:");
+            Console.WriteLine("(1) - Начинаем!");
+            Console.WriteLine("(2) - Выход");
 
             switch (Console.ReadLine())
             {
                 case "1":
-                    CountToMale(); break;
+                    Console.WriteLine("Для начала расскажи немного о себе!");
+                    NameUser();
+                    break;
                 case "2":
-                    CountToFemale(); break;
+                    Console.WriteLine("До свидания!");
+                    break;
                 default:
                     Console.WriteLine("Вы нажали не ту клавишу, попробуйте еще раз!");
                     Console.ReadKey();
                     Main();
                     break;
             }
-             
-            double LifeStyleCheck()
+
+            void NameUser()
             {
-                Console.Clear();
+                Console.WriteLine("Введи свое имя:");
+                nameUser = Console.ReadLine();
+                AgeUser();
+            }
+
+            void AgeUser()
+            {
+                Console.WriteLine("Введи свой возраст:");// from 7 to 150
+                try
+                {
+                    ageUser = Convert.ToDouble(Console.ReadLine());
+                    if (ageUser > 7 && ageUser < 150)
+                    {
+                        WeightUser();
+                    }
+                    else
+                    {
+                        Console.WriteLine(error);
+                        AgeUser();
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine(error);
+                    AgeUser();
+                }
+            }
+
+            void WeightUser()
+            {
+                Console.WriteLine("Введи свой вес:");// from 10 to 500
+                try
+                {
+                    weightUser = Convert.ToDouble(Console.ReadLine());
+                    if (weightUser > 10 && weightUser < 500)
+                    {
+                        HeightUser();
+                    }
+                    else
+                    {
+                        Console.WriteLine(error);
+                        WeightUser();
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine(error);
+                    WeightUser();
+                }
+            }
+
+            void HeightUser()
+            {
+                Console.WriteLine("Введи свой рост в см:");//from 30 to 3000
+                try
+                {
+                    heightUser = Convert.ToDouble(Console.ReadLine());
+                    if (heightUser > 30 && heightUser < 3000)
+                    {
+                        heightUser = heightUser / 100.0;
+                        LifeStyleCheck();
+                    }
+                    else
+                    {
+                        Console.WriteLine(error);
+                        HeightUser();
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine(error);
+                    HeightUser();
+                }
+            }
+
+            void LifeStyleCheck()
+            {
                 Console.WriteLine("И выбери свой образ жизни:");
                 Console.WriteLine("(1) - Сидячий образ жизни без нагрузок");
                 Console.WriteLine("(2) - малоактивный");
                 Console.WriteLine("(3) - активный");
                 Console.WriteLine("(4) - ежедневные интенсивные тренировки");
-                double lifeStyle = 0;
                 switch (Console.ReadLine())
                 {
                     case "1":
@@ -65,31 +154,44 @@ namespace CalorieCalculator
                         LifeStyleCheck();
                         break;
                 }
-                return (lifeStyle);
+                Gender();
             }
 
-            // BMI - body mass index (индекс массы тела)
-            // BMR - basal metabolic rate (кол-во калорий для норм. функционированния организма)
-            double bmr;
+            void Gender()
+            {
+                Console.WriteLine("Выбери свой пол:");
+                Console.WriteLine("(1) - мужской");
+                Console.WriteLine("(2) - женский");
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        gender = "мужской";
+                        CountToMale();
+                        break;
+                    case "2":
+                        gender = "женский";
+                        CountToFemale();
+                        break;
+                    default:
+                        Console.WriteLine("Вы нажали не ту клавишу, попробуйте еще раз!");
+                        Console.ReadKey();
+                        Gender();
+                        break;
+                }
+            }
 
             void CountToMale()
             {
-                Console.WriteLine($"Привет, {nameUser}");
-                double style = LifeStyleCheck();
-                bmr = Math.Round((88.36 + (13.4 * weightUser) + (4.8 * heightUser) - (5.7 * ageUser)) * style);
-                Console.WriteLine($"Рекомендуемое количество калорий в день: {bmr}");
-                Console.WriteLine(BodyMassIndex());
-                Console.ReadKey();
+                bmr = Math.Round((88.36 + (13.4 * weightUser) + (4.8 * heightUser) - (5.7 * ageUser)) * lifeStyle);
+                ChahgeOrProductMenu();
             }
+
             void CountToFemale()
             {
-                Console.WriteLine($"Привет, {nameUser}");
-                double style = LifeStyleCheck();
-                bmr = Math.Round((447.6 + (9.2 * weightUser) + (3.1 * heightUser) - (4.3 * ageUser)) * style);
-                Console.WriteLine($"Рекомендуемое количество калорий в день: {bmr}");
-                Console.WriteLine(BodyMassIndex());
-                Console.ReadKey();
+                bmr = Math.Round((447.6 + (9.2 * weightUser) + (3.1 * heightUser) - (4.3 * ageUser)) * lifeStyle);
+                ChahgeOrProductMenu();
             }
+
             string BodyMassIndex()
             {
                 double bmi = Math.Round(weightUser / (heightUser * heightUser));
@@ -106,11 +208,119 @@ namespace CalorieCalculator
                 { massIndex = "Ожирение первой степени"; }
                 if (bmi > 35.0 && bmi < 39.99)
                 { massIndex = "Ожирение второй степени"; }
-                if(bmi > 40) 
+                if (bmi > 40)
                 { massIndex = "Ожирение третьей степени"; }
 
                 string answer = $"Индекс массы тела: {bmi} ({massIndex})";
                 return (answer);
+            }
+
+            void ChahgeOrProductMenu()
+            {
+                ToPrintProfile();
+                Console.WriteLine("Выберите дальнейшие действия:");
+                Console.WriteLine("(1) - перейти к созданию меню");
+                Console.WriteLine("(2) - изменить суточную норму калорий");
+                Console.WriteLine("(3) - изменить профиль");
+                Console.WriteLine("(4) - выход");
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        ProductMenu(); break;
+                    case "2":
+                        ToChangeBMR(); break;
+                    case "3":
+                        Console.Clear();
+                        NameUser(); break;
+                    case "4": Console.WriteLine("До свидания!"); break;
+                    default:
+                        Console.WriteLine("Вы нажали не ту клавишу, попробуйте еще раз!");
+                        Console.ReadKey();
+                        ChahgeOrProductMenu();
+                        break;
+                }
+            }
+
+
+            void ToPrintProfile()
+            {
+                Console.Clear();
+                Console.WriteLine($"Ваши данные, {nameUser}:");
+                Console.WriteLine($"Пол: {gender}:");
+                Console.WriteLine($"Возраст: {ageUser} лет:");
+                Console.WriteLine($"Рост: {heightUser} м:");
+                Console.WriteLine($"Вес: {weightUser} кг:");
+                Console.WriteLine(BodyMassIndex());
+                Console.WriteLine($"Ваше рекомендуемое количество калорий в день: {bmr}");
+            }
+
+            double ToChangeBMR()
+            {
+                Console.Clear();
+                Console.WriteLine($"Ваше рекомендуемое количество калорий в день: {bmr}");
+                Console.Write("Введите суточную норму калорий: ");
+                try
+                {
+                    bmr = int.Parse(Console.ReadLine());
+                    ChahgeOrProductMenu();
+                    return (bmr);
+                }
+                catch
+                {
+                    Console.WriteLine("Вводите только цифры");
+                    Console.WriteLine("\r\nНажмите Enter, чтобы ввести заново");
+                    ToChangeBMR();
+                    return (bmr);
+                }
+
+            }
+            
+            void ProductMenu()
+            {
+                Console.Clear();
+                Console.WriteLine("(1) - добавить продукт");
+                Console.WriteLine("(2) - изменить продукт");
+                Console.WriteLine("(3) - удалить продукт");
+                Console.WriteLine("(4) - вывести в Excel");
+                Console.WriteLine("(5) - назад");
+                Console.WriteLine("(6) - выход");
+
+                Console.WriteLine($"Осталось: {bmr}");
+                Console.WriteLine("Ваше меню:");
+                foreach (KeyValuePair<string, int> keyValue in UserMenu)
+                {
+                    Console.WriteLine(keyValue.Key + " - " + keyValue.Value);
+                }
+                switch (Console.ReadLine())
+                {
+                    case "1":
+                        AddProduct();
+                        break;
+                    case "2":
+                        //ChangeProduct();
+                        break;
+                    case "3":
+                        //DeleteProduct();
+                        break;
+                    case "4":
+                        //ToExcel(); TODO
+                        break;
+                    case "5":
+                        ChahgeOrProductMenu();
+                        break;
+                    case "6": Console.WriteLine("До свидания!"); break;
+                    default:
+                        Console.WriteLine("Вы нажали не ту клавишу, попробуйте еще раз!");
+                        Console.ReadKey();
+                        ProductMenu();
+                        break;
+
+                }
+
+            }
+            void AddProduct()
+            {
+                //todo
             }
 
         }
