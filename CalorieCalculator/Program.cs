@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CalorieCalculator
 {
@@ -37,10 +38,11 @@ namespace CalorieCalculator
             Console.WriteLine("Что будем делать?:");
             Console.WriteLine("(1) - Начинаем!");
             Console.WriteLine("(2) - Выход");
-
+            Console.Write("\r\nВыберите номер: ");
             switch (Console.ReadLine())
             {
                 case "1":
+                    Console.Clear();
                     Console.WriteLine("Для начала расскажи немного о себе!");
                     NameUser();
                     break;
@@ -115,7 +117,7 @@ namespace CalorieCalculator
                     heightUser = Convert.ToDouble(Console.ReadLine());
                     if (heightUser > 30 && heightUser < 3000)
                     {
-                        heightUser = heightUser / 100.0;
+                        heightUser /= 100.0;
                         LifeStyleCheck();
                     }
                     else
@@ -133,11 +135,13 @@ namespace CalorieCalculator
 
             void LifeStyleCheck()
             {
+                Console.WriteLine();
                 Console.WriteLine("И выбери свой образ жизни:");
                 Console.WriteLine("(1) - Сидячий образ жизни без нагрузок");
                 Console.WriteLine("(2) - малоактивный");
                 Console.WriteLine("(3) - активный");
                 Console.WriteLine("(4) - ежедневные интенсивные тренировки");
+                Console.Write("\r\nВыберите номер: ");
                 switch (Console.ReadLine())
                 {
                     case "1":
@@ -159,9 +163,11 @@ namespace CalorieCalculator
 
             void Gender()
             {
-                Console.WriteLine("Выбери свой пол:");
+                Console.WriteLine();
+                Console.WriteLine("И свой пол:");
                 Console.WriteLine("(1) - мужской");
                 Console.WriteLine("(2) - женский");
+                Console.Write("\r\nВыберите номер: ");
                 switch (Console.ReadLine())
                 {
                     case "1":
@@ -223,6 +229,7 @@ namespace CalorieCalculator
                 Console.WriteLine("(2) - изменить суточную норму калорий");
                 Console.WriteLine("(3) - изменить профиль");
                 Console.WriteLine("(4) - выход");
+                Console.Write("\r\nВыберите номер: ");
                 switch (Console.ReadLine())
                 {
                     case "1":
@@ -245,13 +252,14 @@ namespace CalorieCalculator
             void ToPrintProfile()
             {
                 Console.Clear();
-                Console.WriteLine($"Ваши данные, {nameUser}:");
-                Console.WriteLine($"Пол: {gender}:");
-                Console.WriteLine($"Возраст: {ageUser} лет:");
-                Console.WriteLine($"Рост: {heightUser} м:");
-                Console.WriteLine($"Вес: {weightUser} кг:");
+                Console.WriteLine($"Ваши данные, {nameUser}");
+                Console.WriteLine($"Пол: {gender}");
+                Console.WriteLine($"Возраст: {ageUser} лет");
+                Console.WriteLine($"Рост: {heightUser} м");
+                Console.WriteLine($"Вес: {weightUser} кг");
                 Console.WriteLine(BodyMassIndex());
                 Console.WriteLine($"Ваше рекомендуемое количество калорий в день: {bmr}");
+                Console.WriteLine();
             }
 
             double ToChangeBMR()
@@ -274,7 +282,7 @@ namespace CalorieCalculator
                 }
 
             }
-            
+
             void ProductMenu()
             {
                 Console.Clear();
@@ -282,14 +290,14 @@ namespace CalorieCalculator
                 Console.WriteLine("(2) - изменить продукт");
                 Console.WriteLine("(3) - удалить продукт");
                 Console.WriteLine("(4) - вывести в Excel");
-                Console.WriteLine("(5) - назад");
-                Console.WriteLine("(6) - выход");
-
+                Console.WriteLine("(5) - добавить новый продукт в основной список");
+                Console.WriteLine("(6) - назад");
+                Console.WriteLine("(7) - выход");
                 Console.WriteLine($"Осталось: {bmr}");
                 Console.WriteLine("Ваше меню:");
                 foreach (KeyValuePair<string, int> keyValue in UserMenu)
                 {
-                    Console.WriteLine(keyValue.Key + " - " + keyValue.Value);
+                    Console.WriteLine($"{keyValue.Key}  -  {keyValue.Value} калорий");
                 }
                 switch (Console.ReadLine())
                 {
@@ -300,15 +308,18 @@ namespace CalorieCalculator
                         //ChangeProduct();
                         break;
                     case "3":
-                        //DeleteProduct();
+                        DeleteProduct();
                         break;
                     case "4":
                         //ToExcel(); TODO
                         break;
                     case "5":
+                        AddInProductCalorie();
+                        break;
+                    case "6":
                         ChahgeOrProductMenu();
                         break;
-                    case "6": Console.WriteLine("До свидания!"); break;
+                    case "7": Console.WriteLine("До свидания!"); break;
                     default:
                         Console.WriteLine("Вы нажали не ту клавишу, попробуйте еще раз!");
                         Console.ReadKey();
@@ -318,11 +329,75 @@ namespace CalorieCalculator
                 }
 
             }
-            void AddProduct()
+
+            void AddInProductCalorie()
             {
-                //todo
+                Console.WriteLine("Введите название продукта:");
+                string product = Console.ReadLine();
+                Console.WriteLine("Введите количество калорий, содержащихся в 100г");
+                try
+                {
+                    int calorie = int.Parse(Console.ReadLine());
+                    productCalorieIn100g.Add(product, calorie);
+                    Console.WriteLine("Продукт успешно добавлен!");
+                    ProductMenu();
+                }
+                catch
+                {
+                    Console.WriteLine("Вводите калории цифрами!:");
+                    Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
+                    Console.ReadKey();
+                    ProductMenu();
+                }
+
+
             }
 
+            void AddProduct()
+            {
+                Console.WriteLine("Введите название продукта:");
+                string print = Console.ReadLine();
+                Console.WriteLine("Введите массу в граммах:");
+                try
+                {
+                    int mass = int.Parse(Console.ReadLine());
+                    string product = productCalorieIn100g.Keys.Where(x => x.Contains(print)).First();
+                    int calorie = productCalorieIn100g[product];
+                    int totalCalorie = mass * calorie / 100;
+                    UserMenu.Add(product, totalCalorie);
+                    bmr -= totalCalorie;
+                    ProductMenu();
+
+                }
+                catch
+                {
+                    Console.WriteLine("Такого продукта нет, либо вы ввели неправильно");
+                    Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
+                    Console.ReadKey();
+                    ProductMenu();
+                }
+            }
+
+            void DeleteProduct()
+            {
+                Console.WriteLine("Введите название продукта для удаления:");
+                string delete = Console.ReadLine();
+                try
+                {
+                    string product = UserMenu.Keys.Where(x => x.Contains(delete)).First();
+                    int calorie = UserMenu[product];
+                    bmr += calorie;
+                    UserMenu.Remove(product);
+                    ProductMenu();
+                }
+                catch
+                {
+                    Console.WriteLine("Такого продукта нет, либо вы ввели неправильно");
+                    Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
+                    Console.ReadKey();
+                    ProductMenu();
+                }
+            }
         }
     }
 }
