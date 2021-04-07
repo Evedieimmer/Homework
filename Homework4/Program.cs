@@ -42,8 +42,8 @@ namespace Homework4
                 try
                 {
                     List<int> numbers = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToList();
-                    int min = numbers.Select(x => x).OrderBy(x => x).First();
-                    int max = numbers.Select(x => x).OrderByDescending(x => x).First();
+                    int min = numbers.OrderBy(x => x).First();
+                    int max = numbers.OrderByDescending(x => x).First();
                     Console.WriteLine($"Максимальное значение: {max}");
                     Console.WriteLine($"Минимальное значение: {min}");
 
@@ -65,7 +65,7 @@ namespace Homework4
                 Console.WriteLine("Введите элементы массива через пробел:");
                 try
                 {
-                    int count = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).Distinct().OrderBy(x => x).Count();
+                    int count = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).Distinct().Count(); 
                     Console.WriteLine($"Kоличество уникальных значений: {count}");
 
                     Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
