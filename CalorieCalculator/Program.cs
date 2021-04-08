@@ -305,7 +305,7 @@ namespace CalorieCalculator
                         AddProduct();
                         break;
                     case "2":
-                        //ChangeProduct();
+                        ChangeProduct();
                         break;
                     case "3":
                         DeleteProduct();
@@ -357,11 +357,12 @@ namespace CalorieCalculator
             {
                 Console.WriteLine("Введите название продукта:");
                 string print = Console.ReadLine();
-                Console.WriteLine("Введите массу в граммах:");
+                
                 try
                 {
-                    int mass = int.Parse(Console.ReadLine());
                     string product = productCalorieIn100g.Keys.Where(x => x.Contains(print)).First();
+                    Console.WriteLine("Введите массу в граммах:");
+                    int mass = int.Parse(Console.ReadLine());
                     int calorie = productCalorieIn100g[product];
                     int totalCalorie = mass * calorie / 100;
                     UserMenu.Add(product, totalCalorie);
@@ -388,6 +389,32 @@ namespace CalorieCalculator
                     int calorie = UserMenu[product];
                     bmr += calorie;
                     UserMenu.Remove(product);
+                    ProductMenu();
+                }
+                catch
+                {
+                    Console.WriteLine("Такого продукта нет, либо вы ввели неправильно");
+                    Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
+                    Console.ReadKey();
+                    ProductMenu();
+                }
+            }
+            void ChangeProduct()
+            {
+                Console.WriteLine("Введите название продукта для удаления:");
+                string change = Console.ReadLine();
+                try
+                {
+                    string product = UserMenu.Keys.Where(x => x.Contains(change)).First(); 
+                    int calorieChange = UserMenu[product]; 
+                    bmr += calorieChange;
+                    UserMenu.Remove(product);
+                    int calorieList = productCalorieIn100g[productCalorieIn100g.Keys.Where(x => x == product).First()];
+                    Console.WriteLine("Введите новую массу в граммах:");
+                    int mass = int.Parse(Console.ReadLine());
+                    int totalCalorie = mass * calorieList / 100;
+                    UserMenu.Add(product, totalCalorie);
+                    bmr -= totalCalorie;
                     ProductMenu();
                 }
                 catch
