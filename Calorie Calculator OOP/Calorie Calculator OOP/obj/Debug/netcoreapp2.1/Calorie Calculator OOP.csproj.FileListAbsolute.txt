@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\bin\Debug\netcoreapp2.1\Calorie Calculator OOP.deps.json
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\bin\Debug\netcoreapp2.1\Calorie Calculator OOP.runtimeconfig.json
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\bin\Debug\netcoreapp2.1\Calorie Calculator OOP.runtimeconfig.dev.json
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\bin\Debug\netcoreapp2.1\Calorie Calculator OOP.dll
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\bin\Debug\netcoreapp2.1\Calorie Calculator OOP.pdb
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\bin\Debug\netcoreapp2.1\BaseLibrary.dll
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\bin\Debug\netcoreapp2.1\BaseLibrary.pdb
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\obj\Debug\netcoreapp2.1\Calorie Calculator OOP.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\obj\Debug\netcoreapp2.1\Calorie Calculator OOP.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\obj\Debug\netcoreapp2.1\Calorie Calculator OOP.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\obj\Debug\netcoreapp2.1\Calorie Calculator OOP.AssemblyInfo.cs
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\obj\Debug\netcoreapp2.1\Calorie Calculator OOP.csproj.CopyComplete
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\obj\Debug\netcoreapp2.1\Calorie Calculator OOP.dll
+C:\Users\User\Desktop\Goodline кафедра\Homework\Calorie Calculator OOP\Calorie Calculator OOP\obj\Debug\netcoreapp2.1\Calorie Calculator OOP.pdb
