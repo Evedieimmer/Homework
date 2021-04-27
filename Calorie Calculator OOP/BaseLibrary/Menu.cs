@@ -236,7 +236,6 @@ namespace BaseLibrary
                 Console.WriteLine();
             }
             DecorLine();
-            bmr = Convert.ToDouble(UserInfo.InfoUser.Where(x => x.LoginUser == log).Select(x => x.BMR));
             return log;
         }
 
@@ -320,7 +319,7 @@ namespace BaseLibrary
             switch (Console.ReadLine())
             {
                 case "1":
-                    //ProductMenu(); 
+                    ProductMenu(); 
                     break;
                 case "2":
                     ToChangeBMR(log);
@@ -373,23 +372,41 @@ namespace BaseLibrary
             DecorLine();
             Console.WriteLine("Ваше меню:");
             Console.WriteLine("***********");
+
             Console.WriteLine("Завтрак:");
             Console.WriteLine(">>>>>>>>>");
-            foreach (var item in UserMenu.breakfast)
+            if (UserMenu.breakfast == null)
+            { Console.WriteLine("Пока пусто..."); }
+            else
             {
-                Console.WriteLine($"{item.Product} - {item.Calorie} калорий");
+                foreach (var item in UserMenu.breakfast)
+                {
+                    Console.WriteLine($"{item.Product} - {item.Calorie} калорий");
+                }
             }
+
             Console.WriteLine("Обед:");
             Console.WriteLine(">>>>>>>>>");
-            foreach (var item in UserMenu.dinner)
+            if (UserMenu.dinner == null)
+            { Console.WriteLine("Пока пусто..."); }
+            else
             {
-                Console.WriteLine($"{item.Product} - {item.Calorie} калорий");
+                foreach (var item in UserMenu.dinner)
+                {
+                    Console.WriteLine($"{item.Product} - {item.Calorie} калорий");
+                }
             }
+
             Console.WriteLine("Ужин:");
             Console.WriteLine(">>>>>>>>>");
-            foreach (var item in UserMenu.eveningDinner)
+            if (UserMenu.eveningDinner == null)
+            { Console.WriteLine("Пока пусто..."); }
+            else
             {
-                Console.WriteLine($"{item.Product} - {item.Calorie} калорий");
+                foreach (var item in UserMenu.eveningDinner)
+                {
+                    Console.WriteLine($"{item.Product} - {item.Calorie} калорий");
+                }
             }
 
             DecorLine();
@@ -400,9 +417,10 @@ namespace BaseLibrary
             Console.WriteLine("(4) - изменить продукт");
             Console.WriteLine("(5) - удалить продукт");
             Console.WriteLine("(6) - сохранить в файл");
-            Console.WriteLine("(7) - добавить продукт в глобальный список");
-            Console.WriteLine("(8) - назад");
-            Console.WriteLine("(9) - выход из аккаунта");
+            Console.WriteLine("(7) - посмотреть глобальный список");
+            Console.WriteLine("(8) - добавить продукт в глобальный список");
+            Console.WriteLine("(9) - назад");
+            Console.WriteLine("(10) - выход из аккаунта");
             Console.Write("\r\nВыберите номер: ");
             switch (Console.ReadLine())
             {
@@ -425,12 +443,15 @@ namespace BaseLibrary
                     //ToExcel(); TODO
                     break;
                 case "7":
-                    //AddInProductCalorie();
+                    PrintProduct();
                     break;
                 case "8":
+                    AddInProductCalorie();
+                    break;
+                case "9":
                     ChahgeOrProductMenu();
                     break;
-                case "9": Console.WriteLine("До свидания!"); Begin(); break;
+                case "10": Console.WriteLine("До свидания!"); Begin(); break;
                 default:
                     Console.WriteLine("Вы нажали не ту клавишу, попробуйте еще раз!");
                     Console.ReadKey();
@@ -440,13 +461,38 @@ namespace BaseLibrary
 
         }
 
+        public void PrintProduct()
+        {
+            Console.Clear();
+            DrinkablesCalorieInMililiter.DrinkList = DrinkablesCalorieInMililiter.DataBaseDrink.LoadDrinkDB();
+            FoodCalorieInGramm.FoodList = FoodCalorieInGramm.DataBaseFood.LoadFoodDB();
+            Console.WriteLine("Все напитки:");
+            Console.WriteLine("*************");
+            foreach (var item in DrinkablesCalorieInMililiter.DrinkList)
+            {
+                Console.WriteLine($"{item.Product} - {item.Calorie} калорий");
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Все продукты и блюда:");
+            Console.WriteLine("**********************");
+            foreach (var item in FoodCalorieInGramm.FoodList)
+            {
+                Console.WriteLine($"{item.Product} - {item.Calorie} калорий");
+            }
+            Console.Write("\r\nНажмите Enter, чтобы вернуться в меню");
+            Console.ReadKey();
+            ProductMenu();
+        }
+
         public void AddBreakfast()
         {
+            DrinkablesCalorieInMililiter.DrinkList = DrinkablesCalorieInMililiter.DataBaseDrink.LoadDrinkDB();
+            FoodCalorieInGramm.FoodList = FoodCalorieInGramm.DataBaseFood.LoadFoodDB();
             Console.WriteLine("Введите название продукта:");
             string print = Console.ReadLine();
             try
             {
-                if (DrinkablesCalorieInMililiter.DrinkList.Where(x => x.Product.Contains(print)) != null)
+                if (DrinkablesCalorieInMililiter.DrinkList.Where(x => x.Product.Contains(print)).Count() > 0)
                 {
                     foreach (var drink in DrinkablesCalorieInMililiter.DrinkList.Where(x => x.Product.Contains(print)))
                     {
@@ -461,7 +507,7 @@ namespace BaseLibrary
                         ProductMenu();
                     }
                 }
-                if (FoodCalorieInGramm.FoodList.Where(x => x.Product.Contains(print)) != null)
+                if (FoodCalorieInGramm.FoodList.Where(x => x.Product.Contains(print)).Count() > 0)
                 {
                     foreach (var food in FoodCalorieInGramm.FoodList.Where(x => x.Product.Contains(print)))
                     {
@@ -488,5 +534,74 @@ namespace BaseLibrary
         }
         public void AddDinner() { }
         public void AddEveningDinner() { }
+
+        public void AddInProductCalorie()
+        {
+            Console.Clear();
+            DecorLine();
+            Console.WriteLine("Что вы хотите добавить?");
+            Console.WriteLine("(1) - напиток");
+            Console.WriteLine("(2) - продукт");
+            Console.WriteLine("(3) - назад");
+            Console.Write("\r\nВыберите номер: ");
+            switch (Console.ReadLine())
+            {
+                case "1":
+                     AddDrink();
+                    break;
+                case "2":
+                    AddFood();
+                    break;
+                case "3": ProductMenu(); break;
+                default:
+                    Console.WriteLine("Вы нажали не ту клавишу, попробуйте еще раз!");
+                    Console.ReadKey();
+                    ProductMenu();
+                    break;
+            }
+        }
+
+        public void AddFood()
+        {
+            Console.WriteLine("Введите название продукта:");
+            string namefood = Console.ReadLine();
+            Console.WriteLine("Введите количество калорий в 100гр");
+            try
+            {
+               int caloriefood = int.Parse(Console.ReadLine());
+                FoodCalorieInGramm food = new FoodCalorieInGramm(namefood, caloriefood);
+                FoodCalorieInGramm.FoodList.Add(food);
+                FoodCalorieInGramm.DataBaseFood.SaveFood(FoodCalorieInGramm.FoodList);
+                AddInProductCalorie();
+            }
+            catch
+            {
+                Console.WriteLine("Вы неправильно ввели калории");
+                Console.Write("\r\nНажмите Enter, чтобы вернуться назад");
+                Console.ReadKey();
+                AddInProductCalorie();
+            }
+        }
+        public void AddDrink()
+        {
+            Console.WriteLine("Введите название напитка:");
+            string namedrink = Console.ReadLine();
+            Console.WriteLine("Введите количество калорий в 100гр");
+            try
+            {
+                int caloriedrink = int.Parse(Console.ReadLine());
+                DrinkablesCalorieInMililiter drink = new DrinkablesCalorieInMililiter(namedrink, caloriedrink);
+                DrinkablesCalorieInMililiter.DrinkList.Add(drink);
+                DrinkablesCalorieInMililiter.DataBaseDrink.SaveDrink(DrinkablesCalorieInMililiter.DrinkList);
+                AddInProductCalorie();
+            }
+            catch
+            {
+                Console.WriteLine("Вы неправильно ввели калории");
+                Console.Write("\r\nНажмите Enter, чтобы вернуться назад");
+                Console.ReadKey();
+                AddInProductCalorie();
+            }
+        }
     }
 }

@@ -19,15 +19,15 @@ namespace BaseLibrary
         static UserMenu()
         {
             MenuUser = new List<UserMenu>();
+            breakfast = new List<UserMenu>();
+            dinner = new List<UserMenu>();
+            eveningDinner = new List<UserMenu>();
         }
-
 
         public static List<UserMenu> breakfast { get; set; }
         
         public static List<UserMenu> dinner { get; set; }
         
         public static List<UserMenu> eveningDinner { get; set; }
-      
-
     }
 }
