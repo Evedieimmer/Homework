@@ -21,7 +21,7 @@ namespace BaseLibrary
 
         public static class DataBaseFood
         {
-            public static string FoodPath { get; set; } = "C:\\Users\\User\\Desktop\\Goodline кафедра\\Homework\\Calorie Calculator OOP\\FoodDataBase.txt";
+            public static string FoodPath { get; set; } = "C:\\FoodDataBase.txt";
             public static bool SaveFood(List<FoodCalorieInGramm> foodStore)
             {
                 StreamWriter fileIn;

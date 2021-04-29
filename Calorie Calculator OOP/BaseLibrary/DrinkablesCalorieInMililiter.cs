@@ -21,7 +21,7 @@ namespace BaseLibrary
 
         public static class DataBaseDrink
         {
-            public static string DrinkPath { get; set; } = "C:\\Users\\User\\Desktop\\Goodline кафедра\\Homework\\Calorie Calculator OOP\\DrinkDataBase.txt";
+            public static string DrinkPath { get; set; } = "C:\\DrinkDataBase.txt";
             public static bool SaveDrink(List<DrinkablesCalorieInMililiter> drinkStore)
             {
                 StreamWriter fileIn;

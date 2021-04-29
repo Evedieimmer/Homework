@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
+
 
 namespace BaseLibrary
 {
@@ -32,8 +34,7 @@ namespace BaseLibrary
                     default: continue;
                 }
             } while (key != ConsoleKey.D3);
-            Console.WriteLine("");
-            Console.WriteLine("До свидания!");
+            Console.WriteLine(" До свидания!");
         }
 
         public string Autentificate()
@@ -94,7 +95,7 @@ namespace BaseLibrary
                         string a = AddInProductCalorie("");
                         break;
                     case ConsoleKey.D2:
-                        //DeleteProduct();
+                        DeleteInProductCalorie();
                         break;
                     case ConsoleKey.D3:
                         string b = PrintProduct();
@@ -511,7 +512,7 @@ namespace BaseLibrary
                         DeleteEveningDinner(log);
                         break;
                     case ConsoleKey.D7:
-                        //ToExcel(); TODO
+                        ToFile();
                         break;
                     case ConsoleKey.D8:
                         string a = PrintProduct();
@@ -772,6 +773,33 @@ namespace BaseLibrary
             }
         }
 
+        public string DeleteInProductCalorie()
+        {
+            do
+            {
+                Console.Clear();
+                DecorLine();
+                Console.WriteLine("Что вы хотите удалить?");
+                Console.WriteLine("(1) - напиток");
+                Console.WriteLine("(2) - продукт");
+                Console.WriteLine("(3) - назад");
+                Console.WriteLine("\r\nВыберите номер: ");
+                key = Console.ReadKey().Key;
+                switch (key)
+                {
+                    case ConsoleKey.D1:
+                        Console.WriteLine("");
+                        DeleteDrink();
+                        return null;
+                    case ConsoleKey.D2:
+                        Console.WriteLine("");
+                        DeleteFood();
+                        return null;
+                    default: continue;
+                }
+            } while (key != ConsoleKey.D3);
+            return null;
+        }
         public string AddInProductCalorie(string log)
         {
             do
@@ -842,5 +870,112 @@ namespace BaseLibrary
                 return null;
             }
         }
+
+        public string DeleteFood()
+        {
+            Console.WriteLine("Введите название продукта для удаления:");
+            string namefood = Console.ReadLine();
+            try
+            {
+                foreach (var item in FoodCalorieInGramm.FoodList.Where(x => x.Product.Contains(namefood)))
+                {
+                    FoodCalorieInGramm.FoodList.Remove(item);
+                    break;
+                }
+                return null;
+            }
+            catch
+            {
+                Console.WriteLine("Такого продукта не существует");
+                Console.Write("\r\nНажмите Enter, чтобы вернуться назад");
+                Console.ReadKey();
+                return null;
+            }
+        }
+
+        public string DeleteDrink()
+        {
+            Console.WriteLine("Введите название напитка для удаления:");
+            string print = Console.ReadLine();
+            try
+            {
+                foreach (var item in DrinkablesCalorieInMililiter.DrinkList.Where(x => x.Product.Contains(print)))
+                {
+                    DrinkablesCalorieInMililiter.DrinkList.Remove(item);
+                    break;
+                }
+                return null;
+            }
+            catch
+            {
+                Console.WriteLine("Такого продукта не существует");
+                Console.Write("\r\nНажмите Enter, чтобы вернуться назад");
+                Console.ReadKey();
+                return null;
+            }
+        }
+
+        public bool ToFile()
+        {
+            string path = "C:\\UserMenu.txt";
+
+            StreamWriter fileIn;
+            try
+            {
+                using (fileIn = new StreamWriter(path))
+                {
+                    fileIn.WriteLine("Ваше меню:");
+                    fileIn.WriteLine("***********");
+
+                    fileIn.WriteLine("Завтрак:");
+                    fileIn.WriteLine(">>>>>>>>>");
+                    if (UserMenu.breakfast == null)
+                    { fileIn.WriteLine("Пока пусто..."); }
+                    else
+                    {
+                        foreach (var item in UserMenu.breakfast)
+                        {
+                            fileIn.WriteLine($"{item.Product} - {item.Calorie} калорий");
+                        }
+                    }
+
+                    fileIn.WriteLine("Обед:");
+                    fileIn.WriteLine(">>>>>>>>>");
+                    if (UserMenu.dinner == null)
+                    { fileIn.WriteLine("Пока пусто..."); }
+                    else
+                    {
+                        foreach (var item in UserMenu.dinner)
+                        {
+                            fileIn.WriteLine($"{item.Product} - {item.Calorie} калорий");
+                        }
+                    }
+
+                    fileIn.WriteLine("Ужин:");
+                    fileIn.WriteLine(">>>>>>>>>");
+                    if (UserMenu.eveningDinner == null)
+                    { fileIn.WriteLine("Пока пусто..."); }
+                    else
+                    {
+                        foreach (var item in UserMenu.eveningDinner)
+                        {
+                            fileIn.WriteLine($"{item.Product} - {item.Calorie} калорий");
+                        }
+                    }
+
+                    fileIn.Close();
+                }
+                Console.WriteLine(" Ваш файл создан! Чтобы продолжить, нажмите Enter");
+                Console.ReadKey();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка! {ex.Message}");
+                return false;
+            }
+            return true;
+
+        }
+
     }
 }

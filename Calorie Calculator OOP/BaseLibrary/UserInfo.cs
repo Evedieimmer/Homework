@@ -37,7 +37,7 @@ namespace BaseLibrary
 
         public static class DataBaseInfoUser
         {
-            public static string PassPath { get; set; } = "C:\\Users\\User\\Desktop\\Goodline кафедра\\Homework\\Calorie Calculator OOP\\UserInfo.txt";
+            public static string PassPath { get; set; } = "C:\\UserInfo.txt";
             public static bool SavePass(List<UserInfo> userStore)
             {
                 StreamWriter fileIn;
