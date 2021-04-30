@@ -35,6 +35,7 @@ namespace BaseLibrary
                 }
             } while (key != ConsoleKey.D3);
             Console.WriteLine(" До свидания!");
+            Environment.Exit(0);
         }
 
         public string Autentificate()
@@ -106,7 +107,8 @@ namespace BaseLibrary
                     default: continue;
                 }
             } while (key != ConsoleKey.D5);
-            Console.WriteLine("До свидания!");
+            Console.WriteLine(" До свидания!");
+            Environment.Exit(0);
         }
 
         public string Registration()
@@ -882,6 +884,7 @@ namespace BaseLibrary
                     FoodCalorieInGramm.FoodList.Remove(item);
                     break;
                 }
+                FoodCalorieInGramm.DataBaseFood.SaveFood(FoodCalorieInGramm.FoodList);
                 return null;
             }
             catch
@@ -904,6 +907,7 @@ namespace BaseLibrary
                     DrinkablesCalorieInMililiter.DrinkList.Remove(item);
                     break;
                 }
+                DrinkablesCalorieInMililiter.DataBaseDrink.SaveDrink(DrinkablesCalorieInMililiter.DrinkList);
                 return null;
             }
             catch
