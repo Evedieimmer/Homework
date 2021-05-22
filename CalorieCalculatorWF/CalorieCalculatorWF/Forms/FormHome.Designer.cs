@@ -47,8 +47,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnIcon = new System.Windows.Forms.Button();
             this.btnEditUser = new System.Windows.Forms.Button();
-            this.pictureBoxFruits = new System.Windows.Forms.PictureBox();
-            this.lbIcon = new System.Windows.Forms.Label();
             this.panelEditUser = new System.Windows.Forms.Panel();
             this.rBthFemale = new System.Windows.Forms.RadioButton();
             this.rBtnMale = new System.Windows.Forms.RadioButton();
@@ -63,9 +61,11 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panelFruitPicture = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFruits)).BeginInit();
+            this.pictureBoxFruits = new System.Windows.Forms.PictureBox();
+            this.lbIcon = new System.Windows.Forms.Label();
             this.panelEditUser.SuspendLayout();
             this.panelFruitPicture.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFruits)).BeginInit();
             this.SuspendLayout();
             // 
             // labelName
@@ -249,27 +249,6 @@
             this.btnEditUser.UseWaitCursor = true;
             this.btnEditUser.Click += new System.EventHandler(this.BtnEditUser_Click);
             // 
-            // pictureBoxFruits
-            // 
-            this.pictureBoxFruits.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxFruits.Image = global::CalorieCalculatorWF.Properties.Resources.fruits;
-            this.pictureBoxFruits.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxFruits.Name = "pictureBoxFruits";
-            this.pictureBoxFruits.Size = new System.Drawing.Size(377, 315);
-            this.pictureBoxFruits.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxFruits.TabIndex = 19;
-            this.pictureBoxFruits.TabStop = false;
-            // 
-            // lbIcon
-            // 
-            this.lbIcon.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbIcon.ImageIndex = 2;
-            this.lbIcon.ImageList = this.imageList;
-            this.lbIcon.Location = new System.Drawing.Point(23, 9);
-            this.lbIcon.Name = "lbIcon";
-            this.lbIcon.Size = new System.Drawing.Size(160, 160);
-            this.lbIcon.TabIndex = 16;
-            // 
             // panelEditUser
             // 
             this.panelEditUser.Controls.Add(this.rBthFemale);
@@ -413,6 +392,27 @@
             this.panelFruitPicture.Size = new System.Drawing.Size(377, 315);
             this.panelFruitPicture.TabIndex = 21;
             // 
+            // pictureBoxFruits
+            // 
+            this.pictureBoxFruits.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxFruits.Image = global::CalorieCalculatorWF.Properties.Resources.fruits;
+            this.pictureBoxFruits.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxFruits.Name = "pictureBoxFruits";
+            this.pictureBoxFruits.Size = new System.Drawing.Size(377, 315);
+            this.pictureBoxFruits.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxFruits.TabIndex = 19;
+            this.pictureBoxFruits.TabStop = false;
+            // 
+            // lbIcon
+            // 
+            this.lbIcon.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbIcon.ImageIndex = 2;
+            this.lbIcon.ImageList = this.imageList;
+            this.lbIcon.Location = new System.Drawing.Point(23, 9);
+            this.lbIcon.Name = "lbIcon";
+            this.lbIcon.Size = new System.Drawing.Size(160, 160);
+            this.lbIcon.TabIndex = 16;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -439,11 +439,11 @@
             this.Controls.Add(this.labelAge);
             this.Controls.Add(this.labelName);
             this.Name = "FormHome";
-            this.Text = "FormHome";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFruits)).EndInit();
+            this.Text = "Главная";
             this.panelEditUser.ResumeLayout(false);
             this.panelEditUser.PerformLayout();
             this.panelFruitPicture.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFruits)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

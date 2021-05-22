@@ -59,7 +59,7 @@
             this.ClientSize = new System.Drawing.Size(744, 426);
             this.Controls.Add(this.chart1);
             this.Name = "FormReport";
-            this.Text = "FormReport";
+            this.Text = "Отчеты";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 

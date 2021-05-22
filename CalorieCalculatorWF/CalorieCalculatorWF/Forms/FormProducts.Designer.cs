@@ -226,7 +226,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvProducts);
             this.Name = "FormProducts";
-            this.Text = "FormProducts";
+            this.Text = "Продукты и напитки";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -98,7 +98,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvProducts);
             this.Name = "FormUsers";
-            this.Text = "FormUsers";
+            this.Text = "Пользователи";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
