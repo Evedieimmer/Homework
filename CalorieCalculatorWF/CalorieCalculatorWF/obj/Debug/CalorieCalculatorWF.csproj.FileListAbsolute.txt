@@ -1,0 +1,15 @@
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\bin\Debug\CalorieCalculatorWF.exe.config
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\bin\Debug\CalorieCalculatorWF.exe
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\bin\Debug\CalorieCalculatorWF.pdb
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.Properties.Resources.resources
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.exe
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.pdb
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.FormMenu.resources
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.Forms.FormDiary.resources
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.Forms.FormHome.resources
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.Forms.FormProducts.resources
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.Forms.FormReport.resources
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.Forms.FormUsers.resources
