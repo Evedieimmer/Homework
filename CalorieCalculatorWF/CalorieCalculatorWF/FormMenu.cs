@@ -12,6 +12,7 @@ namespace CalorieCalculatorWF
 {
     public partial class FormMenu : Form
     {
+        
         //поля
         private Button currentButton;
         private Random random;

@@ -15,3 +15,8 @@ C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\Calor
 C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.Forms.FormUsers.resources
 C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.FormRegistration.resources
 C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.LoginForm.resources
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\bin\Debug\EntityFramework.dll
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\Goodline кафедра\Homework\CalorieCalculatorWF\CalorieCalculatorWF\obj\Debug\CalorieCalculatorWF.csproj.CopyComplete

@@ -31,6 +31,7 @@
             this.panelTitleLogin = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTitle = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegistration = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitleLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -78,6 +78,16 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Calculator";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CalorieCalculatorWF.Properties.Resources.Group_6__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(95, 61);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // lbTitle
             // 
             this.lbTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -93,6 +103,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(163)))), ((int)(((byte)(176)))));
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -108,6 +119,7 @@
             // btnRegistration
             // 
             this.btnRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(163)))), ((int)(((byte)(176)))));
+            this.btnRegistration.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnRegistration.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -167,16 +179,6 @@
             this.label5.Size = new System.Drawing.Size(36, 18);
             this.label5.TabIndex = 74;
             this.label5.Text = "или";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CalorieCalculatorWF.Properties.Resources.Group_6__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(95, 61);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
