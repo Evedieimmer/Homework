@@ -35,8 +35,8 @@
             this.lbTitle = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegistration = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbPass = new System.Windows.Forms.TextBox();
+            this.tbLogin = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -115,6 +115,7 @@
             this.btnLogin.Text = "Войти";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.UseWaitCursor = true;
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // btnRegistration
             // 
@@ -131,21 +132,23 @@
             this.btnRegistration.Text = "Регистрация";
             this.btnRegistration.UseVisualStyleBackColor = false;
             this.btnRegistration.UseWaitCursor = true;
+            this.btnRegistration.Click += new System.EventHandler(this.BtnRegistration_Click);
             // 
-            // textBox1
+            // tbPass
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 231);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 22);
-            this.textBox1.TabIndex = 70;
+            this.tbPass.Location = new System.Drawing.Point(83, 231);
+            this.tbPass.Name = "tbPass";
+            this.tbPass.PasswordChar = '*';
+            this.tbPass.Size = new System.Drawing.Size(192, 22);
+            this.tbPass.TabIndex = 70;
             // 
-            // textBox2
+            // tbLogin
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(83, 182);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 22);
-            this.textBox2.TabIndex = 71;
+            this.tbLogin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbLogin.Location = new System.Drawing.Point(83, 182);
+            this.tbLogin.Name = "tbLogin";
+            this.tbLogin.Size = new System.Drawing.Size(192, 22);
+            this.tbLogin.TabIndex = 71;
             // 
             // label4
             // 
@@ -189,8 +192,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbLogin);
+            this.Controls.Add(this.tbPass);
             this.Controls.Add(this.btnRegistration);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lbTitle);
@@ -214,8 +217,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnRegistration;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbPass;
+        private System.Windows.Forms.TextBox tbLogin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;

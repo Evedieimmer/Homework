@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace CalorieCalculatorWF
 {
@@ -24,6 +25,7 @@ namespace CalorieCalculatorWF
         {
             InitializeComponent();
             random = new Random();
+            
         }
 
         //методы

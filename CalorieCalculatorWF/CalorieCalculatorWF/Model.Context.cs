@@ -13,10 +13,10 @@ namespace CalorieCalculatorWF
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CalorieCalculatorDBEntities : DbContext
+    public partial class CalorieCalculatorDBEntities1 : DbContext
     {
-        public CalorieCalculatorDBEntities()
-            : base("name=CalorieCalculatorDBEntities")
+        public CalorieCalculatorDBEntities1()
+            : base("name=CalorieCalculatorDBEntities1")
         {
         }
     

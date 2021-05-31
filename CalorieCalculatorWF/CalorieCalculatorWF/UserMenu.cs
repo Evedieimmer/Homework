@@ -19,6 +19,8 @@ namespace CalorieCalculatorWF
         public Nullable<int> TypeEatingId { get; set; }
         public Nullable<int> ProductsId { get; set; }
         public Nullable<int> UserId { get; set; }
+        public Nullable<int> Calorie { get; set; }
+        public Nullable<int> WeightProduct { get; set; }
     
         public virtual Products Products { get; set; }
         public virtual TypeEating TypeEating { get; set; }

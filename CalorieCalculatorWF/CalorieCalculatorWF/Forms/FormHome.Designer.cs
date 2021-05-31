@@ -48,8 +48,6 @@
             this.btnIcon = new System.Windows.Forms.Button();
             this.btnEditUser = new System.Windows.Forms.Button();
             this.panelEditUser = new System.Windows.Forms.Panel();
-            this.rBthFemale = new System.Windows.Forms.RadioButton();
-            this.rBtnMale = new System.Windows.Forms.RadioButton();
             this.btnSaveUser = new System.Windows.Forms.Button();
             this.tbWeight = new System.Windows.Forms.TextBox();
             this.tbHeight = new System.Windows.Forms.TextBox();
@@ -58,11 +56,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panelFruitPicture = new System.Windows.Forms.Panel();
             this.pictureBoxFruits = new System.Windows.Forms.PictureBox();
             this.lbIcon = new System.Windows.Forms.Label();
+            this.tbBMR = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panelEditUser.SuspendLayout();
             this.panelFruitPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFruits)).BeginInit();
@@ -252,8 +252,10 @@
             // 
             // panelEditUser
             // 
-            this.panelEditUser.Controls.Add(this.rBthFemale);
-            this.panelEditUser.Controls.Add(this.rBtnMale);
+            this.panelEditUser.Controls.Add(this.panelFruitPicture);
+            this.panelEditUser.Controls.Add(this.label12);
+            this.panelEditUser.Controls.Add(this.tbBMR);
+            this.panelEditUser.Controls.Add(this.label9);
             this.panelEditUser.Controls.Add(this.btnSaveUser);
             this.panelEditUser.Controls.Add(this.tbWeight);
             this.panelEditUser.Controls.Add(this.tbHeight);
@@ -262,35 +264,12 @@
             this.panelEditUser.Controls.Add(this.label8);
             this.panelEditUser.Controls.Add(this.label10);
             this.panelEditUser.Controls.Add(this.label13);
-            this.panelEditUser.Controls.Add(this.label12);
             this.panelEditUser.Controls.Add(this.label11);
             this.panelEditUser.Location = new System.Drawing.Point(355, 47);
             this.panelEditUser.Name = "panelEditUser";
             this.panelEditUser.Size = new System.Drawing.Size(380, 315);
             this.panelEditUser.TabIndex = 20;
             this.panelEditUser.Visible = false;
-            // 
-            // rBthFemale
-            // 
-            this.rBthFemale.AutoSize = true;
-            this.rBthFemale.Location = new System.Drawing.Point(193, 128);
-            this.rBthFemale.Name = "rBthFemale";
-            this.rBthFemale.Size = new System.Drawing.Size(88, 21);
-            this.rBthFemale.TabIndex = 32;
-            this.rBthFemale.TabStop = true;
-            this.rBthFemale.Text = "Женский";
-            this.rBthFemale.UseVisualStyleBackColor = true;
-            // 
-            // rBtnMale
-            // 
-            this.rBtnMale.AutoSize = true;
-            this.rBtnMale.Location = new System.Drawing.Point(193, 101);
-            this.rBtnMale.Name = "rBtnMale";
-            this.rBtnMale.Size = new System.Drawing.Size(86, 21);
-            this.rBtnMale.TabIndex = 31;
-            this.rBtnMale.TabStop = true;
-            this.rBtnMale.Text = "Мужской";
-            this.rBtnMale.UseVisualStyleBackColor = true;
             // 
             // btnSaveUser
             // 
@@ -309,24 +288,27 @@
             // 
             // tbWeight
             // 
-            this.tbWeight.Location = new System.Drawing.Point(193, 205);
+            this.tbWeight.Location = new System.Drawing.Point(193, 166);
             this.tbWeight.Name = "tbWeight";
             this.tbWeight.Size = new System.Drawing.Size(171, 22);
             this.tbWeight.TabIndex = 30;
+            this.tbWeight.Text = "0";
             // 
             // tbHeight
             // 
-            this.tbHeight.Location = new System.Drawing.Point(193, 171);
+            this.tbHeight.Location = new System.Drawing.Point(193, 121);
             this.tbHeight.Name = "tbHeight";
             this.tbHeight.Size = new System.Drawing.Size(171, 22);
             this.tbHeight.TabIndex = 29;
+            this.tbHeight.Text = "0";
             // 
             // tbAge
             // 
-            this.tbAge.Location = new System.Drawing.Point(193, 61);
+            this.tbAge.Location = new System.Drawing.Point(193, 73);
             this.tbAge.Name = "tbAge";
             this.tbAge.Size = new System.Drawing.Size(171, 22);
             this.tbAge.TabIndex = 27;
+            this.tbAge.Text = "0";
             // 
             // tbName
             // 
@@ -349,7 +331,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(23, 171);
+            this.label10.Location = new System.Drawing.Point(23, 121);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(126, 23);
             this.label10.TabIndex = 24;
@@ -359,27 +341,17 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(23, 61);
+            this.label13.Location = new System.Drawing.Point(23, 73);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(156, 23);
             this.label13.TabIndex = 21;
             this.label13.Text = "Введите возраст:";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(23, 101);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(136, 23);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Выберите пол: ";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(23, 205);
+            this.label11.Location = new System.Drawing.Point(23, 166);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(118, 23);
             this.label11.TabIndex = 23;
@@ -388,7 +360,7 @@
             // panelFruitPicture
             // 
             this.panelFruitPicture.Controls.Add(this.pictureBoxFruits);
-            this.panelFruitPicture.Location = new System.Drawing.Point(355, 47);
+            this.panelFruitPicture.Location = new System.Drawing.Point(0, 0);
             this.panelFruitPicture.Name = "panelFruitPicture";
             this.panelFruitPicture.Size = new System.Drawing.Size(377, 315);
             this.panelFruitPicture.TabIndex = 21;
@@ -414,13 +386,40 @@
             this.lbIcon.Size = new System.Drawing.Size(160, 160);
             this.lbIcon.TabIndex = 16;
             // 
+            // tbBMR
+            // 
+            this.tbBMR.Location = new System.Drawing.Point(194, 221);
+            this.tbBMR.Name = "tbBMR";
+            this.tbBMR.Size = new System.Drawing.Size(171, 22);
+            this.tbBMR.TabIndex = 32;
+            this.tbBMR.Text = "0";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(23, 198);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(165, 23);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Введите суточную";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(23, 221);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(142, 23);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "норму калорий:";
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(744, 426);
-            this.Controls.Add(this.panelFruitPicture);
             this.Controls.Add(this.panelEditUser);
             this.Controls.Add(this.btnEditUser);
             this.Controls.Add(this.btnIcon);
@@ -480,10 +479,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.RadioButton rBthFemale;
-        private System.Windows.Forms.RadioButton rBtnMale;
         private System.Windows.Forms.Panel panelFruitPicture;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tbBMR;
+        private System.Windows.Forms.Label label9;
     }
 }

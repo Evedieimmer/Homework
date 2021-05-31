@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
 
 namespace CalorieCalculatorWF
 {
     static class Program
     {
-       
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -17,7 +17,8 @@ namespace CalorieCalculatorWF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenu());
+            Application.Run(new LoginForm());
+            
         }
     }
 }

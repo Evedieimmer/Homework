@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="70c15ce37a1a43c8bb3ca28e6b1c6193" Name="Diagram1" ZoomLevel="63">
+      <Diagram DiagramId="70c15ce37a1a43c8bb3ca28e6b1c6193" Name="Diagram1" ZoomLevel="72">
         <EntityTypeShape EntityType="CalorieCalculatorDBModel.Gender" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
         <EntityTypeShape EntityType="CalorieCalculatorDBModel.LifeStyle" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
         <EntityTypeShape EntityType="CalorieCalculatorDBModel.PassStore" Width="1.5" PointX="0.875" PointY="0.5" IsExpanded="true" />
@@ -12,7 +12,7 @@
         <EntityTypeShape EntityType="CalorieCalculatorDBModel.sysdiagrams" Width="1.5" PointX="9.375" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="CalorieCalculatorDBModel.TypeEating" Width="1.5" PointX="4.125" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="CalorieCalculatorDBModel.TypeProduct" Width="1.5" PointX="6.125" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CalorieCalculatorDBModel.UserInfo" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CalorieCalculatorDBModel.UserInfo" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="CalorieCalculatorDBModel.UserMenu" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
         <AssociationConnector Association="CalorieCalculatorDBModel.FK_UserInfo_Gender" ManuallyRouted="false" />
         <AssociationConnector Association="CalorieCalculatorDBModel.FK_UserInfo_LifeStyle" ManuallyRouted="false" />

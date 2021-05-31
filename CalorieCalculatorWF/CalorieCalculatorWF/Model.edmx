@@ -4,19 +4,19 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище CalorieCalculatorDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище CalorieCalculatorDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Gender">
           <Key>
             <PropertyRef Name="GenderId" />
           </Key>
-          <Property Name="GenderId" Type="int" Nullable="false" />
+          <Property Name="GenderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="GenderType" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="LifeStyle">
           <Key>
             <PropertyRef Name="LifeStyleId" />
           </Key>
-          <Property Name="LifeStyleId" Type="int" Nullable="false" />
+          <Property Name="LifeStyleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Value" Type="float" />
           <Property Name="Style" Type="nvarchar(max)" />
         </EntityType>
@@ -24,7 +24,7 @@
           <Key>
             <PropertyRef Name="PassStoreId" />
           </Key>
-          <Property Name="PassStoreId" Type="int" Nullable="false" />
+          <Property Name="PassStoreId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Pass" Type="nvarchar" MaxLength="50" />
           <Property Name="Login" Type="nvarchar" MaxLength="50" />
         </EntityType>
@@ -32,7 +32,7 @@
           <Key>
             <PropertyRef Name="ProductsId" />
           </Key>
-          <Property Name="ProductsId" Type="int" Nullable="false" />
+          <Property Name="ProductsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NameProduct" Type="nvarchar(max)" />
           <Property Name="Calorie" Type="int" />
           <Property Name="TypeProductId" Type="int" />
@@ -51,21 +51,21 @@
           <Key>
             <PropertyRef Name="TypeEatingId" />
           </Key>
-          <Property Name="TypeEatingId" Type="int" Nullable="false" />
+          <Property Name="TypeEatingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Eating" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TypeProduct">
           <Key>
             <PropertyRef Name="TypeProductId" />
           </Key>
-          <Property Name="TypeProductId" Type="int" Nullable="false" />
+          <Property Name="TypeProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TypeProd" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="UserInfo">
           <Key>
             <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NameUser" Type="nvarchar(max)" />
           <Property Name="Age" Type="int" />
           <Property Name="Weight" Type="float" />
@@ -79,11 +79,13 @@
           <Key>
             <PropertyRef Name="UserMenuId" />
           </Key>
-          <Property Name="UserMenuId" Type="int" Nullable="false" />
+          <Property Name="UserMenuId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Date" Type="date" />
           <Property Name="TypeEatingId" Type="int" />
           <Property Name="ProductsId" Type="int" />
           <Property Name="UserId" Type="int" />
+          <Property Name="Calorie" Type="int" />
+          <Property Name="WeightProduct" Type="int" />
         </EntityType>
         <Association Name="FK_Products_TypeProduct">
           <End Role="TypeProduct" Type="Self.TypeProduct" Multiplicity="0..1" />
@@ -208,8 +210,7 @@
             <End Role="UserMenu" EntitySet="UserMenu" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CalorieCalculatorDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -306,6 +307,8 @@
           <NavigationProperty Name="Products" Relationship="Self.FK_UserMenu_Products" FromRole="UserMenu" ToRole="Products" />
           <NavigationProperty Name="TypeEating" Relationship="Self.FK_UserMenu_TypeEating" FromRole="UserMenu" ToRole="TypeEating" />
           <NavigationProperty Name="UserInfo" Relationship="Self.FK_UserMenu_UserInfo" FromRole="UserMenu" ToRole="UserInfo" />
+          <Property Name="Calorie" Type="Int32" />
+          <Property Name="WeightProduct" Type="Int32" />
         </EntityType>
         <Association Name="FK_UserInfo_Gender">
           <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
@@ -517,6 +520,8 @@
           <EntitySetMapping Name="UserMenu">
             <EntityTypeMapping TypeName="CalorieCalculatorDBModel.UserMenu">
               <MappingFragment StoreEntitySet="UserMenu">
+                <ScalarProperty Name="WeightProduct" ColumnName="WeightProduct" />
+                <ScalarProperty Name="Calorie" ColumnName="Calorie" />
                 <ScalarProperty Name="UserMenuId" ColumnName="UserMenuId" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="TypeEatingId" ColumnName="TypeEatingId" />

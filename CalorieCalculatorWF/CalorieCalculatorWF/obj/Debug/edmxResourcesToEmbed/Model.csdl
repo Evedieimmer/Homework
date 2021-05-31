@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CalorieCalculatorDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="GenderId" />
+    </Key>
+    <Property Name="GenderId" Type="Int32" Nullable="false" />
+    <Property Name="GenderType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_UserInfo_Gender" FromRole="Gender" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="LifeStyle">
+    <Key>
+      <PropertyRef Name="LifeStyleId" />
+    </Key>
+    <Property Name="LifeStyleId" Type="Int32" Nullable="false" />
+    <Property Name="Value" Type="Double" />
+    <Property Name="Style" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_UserInfo_LifeStyle" FromRole="LifeStyle" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="PassStore">
+    <Key>
+      <PropertyRef Name="PassStoreId" />
+    </Key>
+    <Property Name="PassStoreId" Type="Int32" Nullable="false" />
+    <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_UserInfo_PassStore" FromRole="PassStore" ToRole="UserInfo" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductsId" />
+    </Key>
+    <Property Name="ProductsId" Type="Int32" Nullable="false" />
+    <Property Name="NameProduct" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Calorie" Type="Int32" />
+    <Property Name="TypeProductId" Type="Int32" />
+    <NavigationProperty Name="TypeProduct" Relationship="Self.FK_Products_TypeProduct" FromRole="Products" ToRole="TypeProduct" />
+    <NavigationProperty Name="UserMenu" Relationship="Self.FK_UserMenu_Products" FromRole="Products" ToRole="UserMenu" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TypeEating">
+    <Key>
+      <PropertyRef Name="TypeEatingId" />
+    </Key>
+    <Property Name="TypeEatingId" Type="Int32" Nullable="false" />
+    <Property Name="Eating" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserMenu" Relationship="Self.FK_UserMenu_TypeEating" FromRole="TypeEating" ToRole="UserMenu" />
+  </EntityType>
+  <EntityType Name="TypeProduct">
+    <Key>
+      <PropertyRef Name="TypeProductId" />
+    </Key>
+    <Property Name="TypeProductId" Type="Int32" Nullable="false" />
+    <Property Name="TypeProd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_Products_TypeProduct" FromRole="TypeProduct" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="NameUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Age" Type="Int32" />
+    <Property Name="Weight" Type="Double" />
+    <Property Name="Height" Type="Double" />
+    <Property Name="GenderId" Type="Int32" />
+    <Property Name="LifeStyleId" Type="Int32" />
+    <Property Name="BMR" Type="Int32" />
+    <Property Name="PassStoreId" Type="Int32" />
+    <NavigationProperty Name="Gender" Relationship="Self.FK_UserInfo_Gender" FromRole="UserInfo" ToRole="Gender" />
+    <NavigationProperty Name="LifeStyle" Relationship="Self.FK_UserInfo_LifeStyle" FromRole="UserInfo" ToRole="LifeStyle" />
+    <NavigationProperty Name="PassStore" Relationship="Self.FK_UserInfo_PassStore" FromRole="UserInfo" ToRole="PassStore" />
+    <NavigationProperty Name="UserMenu" Relationship="Self.FK_UserMenu_UserInfo" FromRole="UserInfo" ToRole="UserMenu" />
+  </EntityType>
+  <EntityType Name="UserMenu">
+    <Key>
+      <PropertyRef Name="UserMenuId" />
+    </Key>
+    <Property Name="UserMenuId" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="TypeEatingId" Type="Int32" />
+    <Property Name="ProductsId" Type="Int32" />
+    <Property Name="UserId" Type="Int32" />
+    <NavigationProperty Name="Products" Relationship="Self.FK_UserMenu_Products" FromRole="UserMenu" ToRole="Products" />
+    <NavigationProperty Name="TypeEating" Relationship="Self.FK_UserMenu_TypeEating" FromRole="UserMenu" ToRole="TypeEating" />
+    <NavigationProperty Name="UserInfo" Relationship="Self.FK_UserMenu_UserInfo" FromRole="UserMenu" ToRole="UserInfo" />
+    <Property Name="Calorie" Type="Int32" />
+    <Property Name="WeightProduct" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_UserInfo_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="GenderId" />
+      </Principal>
+      <Dependent Role="UserInfo">
+        <PropertyRef Name="GenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInfo_LifeStyle">
+    <End Role="LifeStyle" Type="Self.LifeStyle" Multiplicity="0..1" />
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LifeStyle">
+        <PropertyRef Name="LifeStyleId" />
+      </Principal>
+      <Dependent Role="UserInfo">
+        <PropertyRef Name="LifeStyleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInfo_PassStore">
+    <End Role="PassStore" Type="Self.PassStore" Multiplicity="0..1" />
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PassStore">
+        <PropertyRef Name="PassStoreId" />
+      </Principal>
+      <Dependent Role="UserInfo">
+        <PropertyRef Name="PassStoreId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Products_TypeProduct">
+    <End Role="TypeProduct" Type="Self.TypeProduct" Multiplicity="0..1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeProduct">
+        <PropertyRef Name="TypeProductId" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="TypeProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMenu_Products">
+    <End Role="Products" Type="Self.Products" Multiplicity="0..1" />
+    <End Role="UserMenu" Type="Self.UserMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductsId" />
+      </Principal>
+      <Dependent Role="UserMenu">
+        <PropertyRef Name="ProductsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMenu_TypeEating">
+    <End Role="TypeEating" Type="Self.TypeEating" Multiplicity="0..1" />
+    <End Role="UserMenu" Type="Self.UserMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TypeEating">
+        <PropertyRef Name="TypeEatingId" />
+      </Principal>
+      <Dependent Role="UserMenu">
+        <PropertyRef Name="TypeEatingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserMenu_UserInfo">
+    <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="0..1" />
+    <End Role="UserMenu" Type="Self.UserMenu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="UserMenu">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CalorieCalculatorDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Gender" EntityType="Self.Gender" />
+    <EntitySet Name="LifeStyle" EntityType="Self.LifeStyle" />
+    <EntitySet Name="PassStore" EntityType="Self.PassStore" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TypeEating" EntityType="Self.TypeEating" />
+    <EntitySet Name="TypeProduct" EntityType="Self.TypeProduct" />
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" />
+    <EntitySet Name="UserMenu" EntityType="Self.UserMenu" />
+    <AssociationSet Name="FK_UserInfo_Gender" Association="Self.FK_UserInfo_Gender">
+      <End Role="Gender" EntitySet="Gender" />
+      <End Role="UserInfo" EntitySet="UserInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInfo_LifeStyle" Association="Self.FK_UserInfo_LifeStyle">
+      <End Role="LifeStyle" EntitySet="LifeStyle" />
+      <End Role="UserInfo" EntitySet="UserInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInfo_PassStore" Association="Self.FK_UserInfo_PassStore">
+      <End Role="PassStore" EntitySet="PassStore" />
+      <End Role="UserInfo" EntitySet="UserInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Products_TypeProduct" Association="Self.FK_Products_TypeProduct">
+      <End Role="TypeProduct" EntitySet="TypeProduct" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMenu_Products" Association="Self.FK_UserMenu_Products">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="UserMenu" EntitySet="UserMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMenu_TypeEating" Association="Self.FK_UserMenu_TypeEating">
+      <End Role="TypeEating" EntitySet="TypeEating" />
+      <End Role="UserMenu" EntitySet="UserMenu" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserMenu_UserInfo" Association="Self.FK_UserMenu_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="UserMenu" EntitySet="UserMenu" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
