@@ -58,6 +58,7 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(114)))), ((int)(((byte)(131)))));
             this.button2.FlatAppearance.BorderSize = 2;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -69,7 +70,6 @@
             this.button2.TabIndex = 53;
             this.button2.Text = "Удалить аккаунт";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.UseWaitCursor = true;
             // 
             // FormUsers
             // 

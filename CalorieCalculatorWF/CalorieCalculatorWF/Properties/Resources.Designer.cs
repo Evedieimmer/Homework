@@ -93,6 +93,16 @@ namespace CalorieCalculatorWF.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fruits1 {
+            get {
+                object obj = ResourceManager.GetObject("fruits1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Group_6__1_ {
             get {
                 object obj = ResourceManager.GetObject("Group 6 (1)", resourceCulture);

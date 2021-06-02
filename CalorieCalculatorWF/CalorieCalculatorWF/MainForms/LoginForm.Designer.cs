@@ -103,7 +103,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(163)))), ((int)(((byte)(176)))));
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -114,13 +114,12 @@
             this.btnLogin.TabIndex = 68;
             this.btnLogin.Text = "Войти";
             this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.UseWaitCursor = true;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // btnRegistration
             // 
             this.btnRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(163)))), ((int)(((byte)(176)))));
-            this.btnRegistration.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnRegistration.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistration.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -131,7 +130,6 @@
             this.btnRegistration.TabIndex = 69;
             this.btnRegistration.Text = "Регистрация";
             this.btnRegistration.UseVisualStyleBackColor = false;
-            this.btnRegistration.UseWaitCursor = true;
             this.btnRegistration.Click += new System.EventHandler(this.BtnRegistration_Click);
             // 
             // tbPass

@@ -18,7 +18,12 @@ namespace CalorieCalculatorWF
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
-            
+            //Application.Run(new test());
         }
+    }
+
+    static class IdUser
+    {
+        public static int Id { get; set; }
     }
 }

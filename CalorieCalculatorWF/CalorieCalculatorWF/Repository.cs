@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 
@@ -45,6 +44,7 @@ namespace CalorieCalculatorWF
                     TypeProductId = type
                 };
                 db.Products.Add(prod);
+                db.SaveChanges();
             }
         }
 
@@ -66,6 +66,27 @@ namespace CalorieCalculatorWF
                     PassStoreId = passStoreId
                 };
                 db.UserInfo.Add(user);
+                db.SaveChanges();
+            }
+        }
+
+        public LifeStyle SearchStyle(string style)
+        {
+            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
+            {
+                LifeStyle styleList = new LifeStyle();
+                styleList = db.LifeStyle.FirstOrDefault(x => x.Style == style);
+                return styleList;
+            }
+        }
+
+        public int SearchGender(string gender)
+        {
+            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
+            {
+                Gender user = new Gender();
+                user = db.Gender.FirstOrDefault(x => x.GenderType == gender);
+                return user.GenderId;
             }
         }
 
@@ -102,12 +123,19 @@ namespace CalorieCalculatorWF
             {
                 if (db.PassStore.Any(x => x.Pass == pass && x.Login == log))
                     throw (new Exception("Такие логин и пароль уже существуют!"));
-                PassStore passLog = new PassStore
-                {
-                    Pass = pass,
-                    Login = log
-                };
+                PassStore passLog = new PassStore {Pass = pass, Login = log };
                 db.PassStore.Add(passLog);
+                db.SaveChanges();
+            }
+        }
+
+        public int SearchPassId(string pass, string log)
+        {
+            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
+            {
+                PassStore passList = new PassStore();
+                passList = db.PassStore.FirstOrDefault(x => x.Pass == pass && x.Login == log);
+                return passList.PassStoreId;
             }
         }
 
@@ -135,40 +163,8 @@ namespace CalorieCalculatorWF
             }
         }
 
-        public void ChangeUser(UserInfo user, string name, int age, double weight, double height, int bmr)
-        {
-            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
-            {
-                
-                UserInfo userChange = db.UserInfo.Where(x => x.UserId == user.UserId).First();
-                if (name != null)
-                {
-                    userChange.NameUser = name;
-                    db.SaveChanges();
-                }
-                if (age != 0)
-                {
-                    userChange.Age = age;
-                    db.SaveChanges();
-                }
-                if (weight != 0)
-                {
-                    userChange.Weight = weight;
-                    db.SaveChanges();
-                }
-                if (height != 0)
-                {
-                    userChange.Height = height;
-                    db.SaveChanges();
-                }
-                if (bmr != 0)
-                {
-                    userChange.BMR = bmr;
-                    db.SaveChanges();
-                }
-            }
-        }
-        public void ChangeMenu(UserMenu menu,int calorie, int weight)
+      
+        public void ChangeMenu(UserMenu menu, int calorie, int weight)
         {
             using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
             {
@@ -187,17 +183,97 @@ namespace CalorieCalculatorWF
                 db.SaveChanges();
             }
         }
+
+
+
         public int IsLogin(string pass, string log)
         {
             using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
             {
                 int idUser;
-                if (db.PassStore.Any(x => x.Pass == pass && x.Login == log) == true)
+                try
                 {
                     idUser = db.PassStore.Where(x => x.Pass == pass && x.Login == log).Select(x => x.PassStoreId).First();
                     return idUser;
                 }
-                return 0;
+                catch
+                {
+                    return 0;
+                }
+            }
+        }
+        public UserInfo GetUserProfile(int passId)
+        {
+            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
+            {
+                UserInfo user = new UserInfo();
+                user = db.UserInfo.FirstOrDefault(x => x.PassStoreId == passId);
+                return user;
+            }
+        }
+        public string GetUserGender(int? genderId)
+        {
+            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
+            {
+                Gender user = new Gender();
+                user = db.Gender.FirstOrDefault(x => x.GenderId == genderId);
+                return user.GenderType;
+            }
+        }
+        public LifeStyle GetUserLifeStyle(int? idStyle)
+        {
+            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
+            {
+                LifeStyle userStyle = new LifeStyle();
+                userStyle = db.LifeStyle.FirstOrDefault(x => x.LifeStyleId == idStyle);
+                return userStyle;
+            }
+        }
+
+        public void ChangeNameUser(int iduser, string name)
+        {
+            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
+            {
+                UserInfo userChange = db.UserInfo.Where(x => x.UserId == iduser).First();
+                    userChange.NameUser = name;
+                    db.SaveChanges();
+            }
+        }
+        public void ChangeAgeUser(int iduser, int age)
+        {
+            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
+            {
+                UserInfo userChange = db.UserInfo.Where(x => x.UserId == iduser).First();
+                userChange.Age = age;
+                db.SaveChanges();
+            }
+        }
+
+        public void ChangeWeightUser(int iduser, double weight)
+        {
+            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
+            {
+                UserInfo userChange = db.UserInfo.Where(x => x.UserId == iduser).First();
+                userChange.Weight = weight;
+                db.SaveChanges();
+            }
+        }
+        public void ChangeHeightUser(int iduser, double height)
+        {
+            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
+            {
+                UserInfo userChange = db.UserInfo.Where(x => x.UserId == iduser).First();
+                userChange.Height = height;
+                db.SaveChanges();
+            }
+        }
+        public void ChangeBMRUser(int iduser, int bmr)
+        {
+            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
+            {
+                UserInfo userChange = db.UserInfo.Where(x => x.UserId == iduser).First();
+                userChange.BMR = bmr;
+                db.SaveChanges();
             }
         }
     }

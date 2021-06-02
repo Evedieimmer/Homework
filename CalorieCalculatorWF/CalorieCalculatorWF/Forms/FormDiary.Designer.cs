@@ -250,6 +250,7 @@
             // 
             // btnEditUserProd
             // 
+            this.btnEditUserProd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditUserProd.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnEditUserProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditUserProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -260,10 +261,10 @@
             this.btnEditUserProd.TabIndex = 67;
             this.btnEditUserProd.Text = "Изменить";
             this.btnEditUserProd.UseVisualStyleBackColor = true;
-            this.btnEditUserProd.UseWaitCursor = true;
             // 
             // btnDeleteUserProd
             // 
+            this.btnDeleteUserProd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteUserProd.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnDeleteUserProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteUserProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -274,10 +275,10 @@
             this.btnDeleteUserProd.TabIndex = 68;
             this.btnDeleteUserProd.Text = "Удалить";
             this.btnDeleteUserProd.UseVisualStyleBackColor = true;
-            this.btnDeleteUserProd.UseWaitCursor = true;
             // 
             // btnAddDinner
             // 
+            this.btnAddDinner.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddDinner.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddDinner.FlatAppearance.BorderSize = 0;
             this.btnAddDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -290,6 +291,7 @@
             // 
             // btnAddSnack
             // 
+            this.btnAddSnack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddSnack.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddSnack.FlatAppearance.BorderSize = 0;
             this.btnAddSnack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -302,6 +304,7 @@
             // 
             // btnAddEveningDinner
             // 
+            this.btnAddEveningDinner.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddEveningDinner.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnAddEveningDinner.FlatAppearance.BorderSize = 0;
             this.btnAddEveningDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -314,6 +317,7 @@
             // 
             // AddBreakfast
             // 
+            this.AddBreakfast.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddBreakfast.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.AddBreakfast.FlatAppearance.BorderSize = 0;
             this.AddBreakfast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

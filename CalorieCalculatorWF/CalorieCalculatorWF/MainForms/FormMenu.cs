@@ -13,7 +13,7 @@ namespace CalorieCalculatorWF
 {
     public partial class FormMenu : Form
     {
-        
+        public MenuPresenter menuPresenter;
         //поля
         private Button currentButton;
         private Random random;
@@ -25,9 +25,21 @@ namespace CalorieCalculatorWF
         {
             InitializeComponent();
             random = new Random();
-            
+            Repository repository = new Repository();
+            menuPresenter = new MenuPresenter(this, repository);
+            VisibleAdminBtn();
+            ShowName();
+        }
+        
+        public void ShowName()
+        {
+            lbHelloName.Text = menuPresenter.ShowHelloNameUser();
         }
 
+        public void VisibleAdminBtn()
+        {
+            btnUsers.Visible = menuPresenter.IsAdmin();
+        }
         //методы
         private Color SelectThemeColor()
         {
@@ -88,6 +100,7 @@ namespace CalorieCalculatorWF
             childForm.BringToFront();
             childForm.Show();
             lbTitle.Text = childForm.Text;
+            lbHelloName.Visible = false;
         }
 
         private void BtnHomePage_Click(object sender, EventArgs e)

@@ -20,18 +20,26 @@ namespace CalorieCalculatorWF.Forms
             num = 0;
             UserInfo userInfo = new UserInfo();
             Repository repository = new Repository();
-            homePresenter = new HomePresenter(this, userInfo, repository); 
+            homePresenter = new HomePresenter(this, userInfo, repository);
+            PrintProfile();
+            
         }
-
-        public void UpdateLabelInfo(UserInfo user)
+        
+        public void PrintProfile()
         {
-            labelName.Text = user.NameUser;
-            labelAge.Text = user.Age.ToString();
-            labelGender.Text = user.Gender.ToString();
-            labelHeight.Text = user.Height.ToString();
-            labelBMR.Text = user.BMR.ToString();
-            //labelBMI.Text = BmiCount();
-
+            Dictionary<string, string> user = homePresenter.GetUserInfo();
+            labelName.Text = user["name"];
+            labelAge.Text = user["age"];
+            labelGender.Text = user["gender"];
+            labelWeight.Text = user["weight"];
+            labelHeight.Text = user["height"];
+            labelBMI.Text = user["bmi"];
+            labelBMR.Text = user["bmr"];
+        }
+        public void FruitPictureVisible(bool visiblePicture, bool visibleEdit)
+        {
+            panelFruits.Visible = visiblePicture;
+            panelEditUser.Visible = visibleEdit;
         }
 
         private void BtnIcon_Click(object sender, EventArgs e)
@@ -44,14 +52,34 @@ namespace CalorieCalculatorWF.Forms
 
         private void BtnEditUser_Click(object sender, EventArgs e)
         {
-            panelFruitPicture.Visible = false;
-            panelEditUser.Visible = true;
+            FruitPictureVisible(false, true);
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+
+        private void BtSaveUser_Click(object sender, EventArgs e)
         {
-            panelFruitPicture.Visible = true;
-            panelEditUser.Visible = false;
+            if (tbChangeName.Text.Trim() != "")
+            {
+                homePresenter.EditName(tbChangeName);
+            }
+            if (tbChangeAge.Text.Trim() != "")
+            {
+                homePresenter.EditAge(tbChangeAge);
+            }
+            if (tbChangeHeight.Text.Trim() != "")
+            {
+                homePresenter.EditHeight(tbChangeHeight);
+            }
+            if (tbChangeWeight.Text.Trim() != "")
+            {
+                homePresenter.EditWeight(tbChangeWeight);
+            }
+            if (tbChangeBMR.Text.Trim() != "")
+            {
+                homePresenter.EditBmr(tbChangeBMR);
+            }
+            PrintProfile();
+            FruitPictureVisible(true, false);
         }
     }
 }

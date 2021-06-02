@@ -30,8 +30,6 @@
         {
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnEditUser = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnAddProd = new System.Windows.Forms.Button();
             this.btnOnlyEat = new System.Windows.Forms.Button();
             this.btnOnlyDrink = new System.Windows.Forms.Button();
@@ -67,36 +65,9 @@
             this.label2.TabIndex = 47;
             this.label2.Text = "Список продуктов:";
             // 
-            // btnEditUser
-            // 
-            this.btnEditUser.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            this.btnEditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnEditUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEditUser.Location = new System.Drawing.Point(511, 379);
-            this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Size = new System.Drawing.Size(213, 35);
-            this.btnEditUser.TabIndex = 48;
-            this.btnEditUser.Text = "Удалить";
-            this.btnEditUser.UseVisualStyleBackColor = true;
-            this.btnEditUser.UseWaitCursor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(511, 338);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 35);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "Редактировать";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.UseWaitCursor = true;
-            // 
             // btnAddProd
             // 
+            this.btnAddProd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddProd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(114)))), ((int)(((byte)(131)))));
             this.btnAddProd.FlatAppearance.BorderSize = 2;
             this.btnAddProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -108,10 +79,10 @@
             this.btnAddProd.TabIndex = 50;
             this.btnAddProd.Text = "Добавить";
             this.btnAddProd.UseVisualStyleBackColor = true;
-            this.btnAddProd.UseWaitCursor = true;
             // 
             // btnOnlyEat
             // 
+            this.btnOnlyEat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOnlyEat.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnOnlyEat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOnlyEat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -122,10 +93,10 @@
             this.btnOnlyEat.TabIndex = 51;
             this.btnOnlyEat.Text = "Только продукты";
             this.btnOnlyEat.UseVisualStyleBackColor = true;
-            this.btnOnlyEat.UseWaitCursor = true;
             // 
             // btnOnlyDrink
             // 
+            this.btnOnlyDrink.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOnlyDrink.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.btnOnlyDrink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOnlyDrink.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -136,7 +107,6 @@
             this.btnOnlyDrink.TabIndex = 52;
             this.btnOnlyDrink.Text = "Только напитки";
             this.btnOnlyDrink.UseVisualStyleBackColor = true;
-            this.btnOnlyDrink.UseWaitCursor = true;
             // 
             // textBox1
             // 
@@ -221,12 +191,11 @@
             this.Controls.Add(this.btnOnlyDrink);
             this.Controls.Add(this.btnOnlyEat);
             this.Controls.Add(this.btnAddProd);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnEditUser);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvProducts);
             this.Name = "FormProducts";
             this.Text = "Продукты и напитки";
+            this.Load += new System.EventHandler(this.FormProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -237,8 +206,6 @@
 
         private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnEditUser;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAddProd;
         private System.Windows.Forms.Button btnOnlyEat;
         private System.Windows.Forms.Button btnOnlyDrink;

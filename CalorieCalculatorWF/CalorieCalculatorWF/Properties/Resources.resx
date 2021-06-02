@@ -121,8 +121,8 @@
   <data name="icons8-корзина-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-корзина-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fruits" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fruits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="line_dotted_icon_125232" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\line_dotted_icon_125232.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="smoothie_fruits_vegetables_fruit_cup_apple_carrot_icon_1424271" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\smoothie_fruits_vegetables_fruit_cup_apple_carrot_icon_1424271.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,23 +130,23 @@
   <data name="icons8-плюс-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-плюс-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-комбинированный-график-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-комбинированный-график-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icons8-закат-солнца-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-закат-солнца-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1486564407-plus-green_815211" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1486564407-plus-green_815211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-опрос-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-опрос-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-конференция-фон-выбранные-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-конференция-фон-выбранные-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="smoothie_fruits_vegetables_fruit_cup_apple_carrot_icon_142427" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\smoothie_fruits_vegetables_fruit_cup_apple_carrot_icon_142427.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-закат-солнца-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-закат-солнца-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-восход-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-восход-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-закат-солнца-26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-закат-солнца-26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-солнце-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-солнце-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,26 +157,29 @@
   <data name="icons8-восход-26" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-восход-26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="line_dotted_icon_125232" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\line_dotted_icon_125232.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-комбинированный-график-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-комбинированный-график-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1486564407-plus-green_81521" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1486564407-plus-green_81521.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-восход-261" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-восход-261.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Group 6 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 6 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-главная-страница-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-главная-страница-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-закат-солнца-26" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-закат-солнца-26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-восход-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-восход-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="smoothie_fruits_vegetables_fruit_cup_apple_carrot_icon_142427" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\smoothie_fruits_vegetables_fruit_cup_apple_carrot_icon_142427.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1486564407-plus-green_815211" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1486564407-plus-green_815211.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-опрос-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-опрос-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fruits" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fruits.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-восход-261" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-восход-261.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-лиса-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-лиса-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,7 +187,7 @@
   <data name="icons8-яркая-луна-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-яркая-луна-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Group 6 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Group 6 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fruits1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fruits1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

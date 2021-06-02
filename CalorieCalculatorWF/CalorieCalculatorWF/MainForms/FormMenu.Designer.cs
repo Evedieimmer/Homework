@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelTitle = new System.Windows.Forms.Panel();
-            this.lbTitle = new System.Windows.Forms.Label();
-            this.panelDesktop = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbHelloName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnDiary = new System.Windows.Forms.Button();
             this.btnHomePage = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelTitle = new System.Windows.Forms.Panel();
+            this.lbHelloName = new System.Windows.Forms.Label();
+            this.lbTitle = new System.Windows.Forms.Label();
+            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -64,107 +64,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(220, 553);
             this.panelMenu.TabIndex = 0;
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(59)))));
-            this.panelLogo.Controls.Add(this.label1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.panelLogo.Size = new System.Drawing.Size(220, 80);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(24, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Calorie Calculator";
-            // 
-            // panelTitle
-            // 
-            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(163)))), ((int)(((byte)(176)))));
-            this.panelTitle.Controls.Add(this.lbHelloName);
-            this.panelTitle.Controls.Add(this.lbTitle);
-            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(220, 0);
-            this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(762, 80);
-            this.panelTitle.TabIndex = 1;
-            // 
-            // lbTitle
-            // 
-            this.lbTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbTitle.AutoSize = true;
-            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbTitle.ForeColor = System.Drawing.Color.White;
-            this.lbTitle.Location = new System.Drawing.Point(277, 28);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(120, 33);
-            this.lbTitle.TabIndex = 0;
-            this.lbTitle.Text = "Привет,";
-            // 
-            // panelDesktop
-            // 
-            this.panelDesktop.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panelDesktop.Controls.Add(this.label3);
-            this.panelDesktop.Controls.Add(this.label2);
-            this.panelDesktop.Controls.Add(this.pictureBox1);
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(220, 80);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(762, 473);
-            this.panelDesktop.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.label3.Location = new System.Drawing.Point(361, 242);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(251, 58);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Calculator";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
-            this.label2.Location = new System.Drawing.Point(361, 184);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 58);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Calorie";
-            // 
-            // lbHelloName
-            // 
-            this.lbHelloName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbHelloName.AutoSize = true;
-            this.lbHelloName.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbHelloName.ForeColor = System.Drawing.Color.White;
-            this.lbHelloName.Location = new System.Drawing.Point(394, 28);
-            this.lbHelloName.Name = "lbHelloName";
-            this.lbHelloName.Size = new System.Drawing.Size(93, 33);
-            this.lbHelloName.TabIndex = 1;
-            this.lbHelloName.Text = "Name";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::CalorieCalculatorWF.Properties.Resources.Group_6__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(180, 150);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(175, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // btnUsers
             // 
@@ -265,6 +164,107 @@
             this.btnHomePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHomePage.UseVisualStyleBackColor = true;
             this.btnHomePage.Click += new System.EventHandler(this.BtnHomePage_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(59)))));
+            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.panelLogo.Size = new System.Drawing.Size(220, 80);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(24, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Calorie Calculator";
+            // 
+            // panelTitle
+            // 
+            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(163)))), ((int)(((byte)(176)))));
+            this.panelTitle.Controls.Add(this.lbHelloName);
+            this.panelTitle.Controls.Add(this.lbTitle);
+            this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitle.Location = new System.Drawing.Point(220, 0);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(762, 80);
+            this.panelTitle.TabIndex = 1;
+            // 
+            // lbHelloName
+            // 
+            this.lbHelloName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbHelloName.AutoSize = true;
+            this.lbHelloName.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbHelloName.ForeColor = System.Drawing.Color.White;
+            this.lbHelloName.Location = new System.Drawing.Point(394, 28);
+            this.lbHelloName.Name = "lbHelloName";
+            this.lbHelloName.Size = new System.Drawing.Size(93, 33);
+            this.lbHelloName.TabIndex = 1;
+            this.lbHelloName.Text = "Name";
+            // 
+            // lbTitle
+            // 
+            this.lbTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbTitle.ForeColor = System.Drawing.Color.White;
+            this.lbTitle.Location = new System.Drawing.Point(266, 28);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(120, 33);
+            this.lbTitle.TabIndex = 0;
+            this.lbTitle.Text = "Привет,";
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelDesktop.Controls.Add(this.label3);
+            this.panelDesktop.Controls.Add(this.label2);
+            this.panelDesktop.Controls.Add(this.pictureBox1);
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(220, 80);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(762, 473);
+            this.panelDesktop.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.label3.Location = new System.Drawing.Point(361, 242);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(251, 58);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Calculator";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
+            this.label2.Location = new System.Drawing.Point(361, 184);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(184, 58);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Calorie";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CalorieCalculatorWF.Properties.Resources.Group_6__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(180, 150);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(175, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FormMenu
             // 

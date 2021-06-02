@@ -59,16 +59,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormMenu.cs">
+    <Compile Include="MainForms\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMenu.Designer.cs">
+    <Compile Include="MainForms\FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegistration.cs">
+    <Compile Include="MainForms\FormRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegistration.Designer.cs">
+    <Compile Include="MainForms\FormRegistration.Designer.cs">
       <DependentUpon>FormRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FormDiary.cs">
@@ -104,17 +104,18 @@
     <Compile Include="Gender.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="HomePresenter.cs" />
+    <Compile Include="Presenters\HomePresenter.cs" />
     <Compile Include="LifeStyle.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="MainForms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="MainForms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginPresenter.cs" />
+    <Compile Include="Presenters\LoginPresenter.cs" />
+    <Compile Include="Presenters\MenuPresenter.cs" />
     <Compile Include="Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -138,9 +139,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Presenters\RegistrationPresenter.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemeColor.cs" />
     <Compile Include="TypeEating.cs">
@@ -155,10 +163,10 @@
     <Compile Include="UserMenu.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormMenu.resx">
+    <EmbeddedResource Include="MainForms\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRegistration.resx">
+    <EmbeddedResource Include="MainForms\FormRegistration.resx">
       <DependentUpon>FormRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormDiary.resx">
@@ -176,7 +184,7 @@
     <EmbeddedResource Include="Forms\FormUsers.resx">
       <DependentUpon>FormUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="MainForms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -189,6 +197,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
@@ -293,7 +304,9 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\fruits1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -21,7 +21,7 @@ namespace CalorieCalculatorWF
         }
     
         public int LifeStyleId { get; set; }
-        public Nullable<double> Value { get; set; }
+        public double Value { get; set; }
         public string Style { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

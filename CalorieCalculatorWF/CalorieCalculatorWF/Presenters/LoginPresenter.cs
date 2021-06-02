@@ -16,17 +16,14 @@ namespace CalorieCalculatorWF
 
         public void Autentification(string pass, string log)
         {
-            if (Repository.IsLogin(pass, log) != 0)
+            IdUser.Id = Repository.IsLogin(pass, log);
+            if (IdUser.Id != 0)
             {
-                //if (Repository.IsLogin(pass, log) == 1)
-                //{
-                //    //to admin
-                //}
                 ShowFormMenu();
             }
             else
             {
-                MessageBox.Show("Ошибка! Данные введены не верно!", "Ошибка!");
+                MessageBox.Show("Ошибка! Данные введены не верно!");
             }
         }
 
@@ -34,6 +31,7 @@ namespace CalorieCalculatorWF
         {
             FormRegistration registForm = new FormRegistration();
             registForm.Show();
+            
         }
 
         public void ShowFormMenu()

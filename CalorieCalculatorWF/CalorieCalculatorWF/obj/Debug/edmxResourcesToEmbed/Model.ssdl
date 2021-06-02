@@ -5,14 +5,14 @@
       <PropertyRef Name="GenderId" />
     </Key>
     <Property Name="GenderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="GenderType" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenderType" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="LifeStyle">
     <Key>
       <PropertyRef Name="LifeStyleId" />
     </Key>
     <Property Name="LifeStyleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Value" Type="float" />
+    <Property Name="Value" Type="float" Nullable="false" />
     <Property Name="Style" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="PassStore">
@@ -20,16 +20,16 @@
       <PropertyRef Name="PassStoreId" />
     </Key>
     <Property Name="PassStoreId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Pass" Type="nvarchar" MaxLength="50" />
-    <Property Name="Login" Type="nvarchar" MaxLength="50" />
+    <Property Name="Pass" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Products">
     <Key>
       <PropertyRef Name="ProductsId" />
     </Key>
     <Property Name="ProductsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NameProduct" Type="nvarchar(max)" />
-    <Property Name="Calorie" Type="int" />
+    <Property Name="NameProduct" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Calorie" Type="int" Nullable="false" />
     <Property Name="TypeProductId" Type="int" />
   </EntityType>
   <EntityType Name="sysdiagrams">
@@ -47,14 +47,14 @@
       <PropertyRef Name="TypeEatingId" />
     </Key>
     <Property Name="TypeEatingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Eating" Type="nvarchar" MaxLength="50" />
+    <Property Name="Eating" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="TypeProduct">
     <Key>
       <PropertyRef Name="TypeProductId" />
     </Key>
     <Property Name="TypeProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TypeProd" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeProd" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="UserInfo">
     <Key>

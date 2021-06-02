@@ -22,7 +22,7 @@ namespace CalorieCalculatorWF
     
         public int ProductsId { get; set; }
         public string NameProduct { get; set; }
-        public Nullable<int> Calorie { get; set; }
+        public int Calorie { get; set; }
         public Nullable<int> TypeProductId { get; set; }
     
         public virtual TypeProduct TypeProduct { get; set; }
