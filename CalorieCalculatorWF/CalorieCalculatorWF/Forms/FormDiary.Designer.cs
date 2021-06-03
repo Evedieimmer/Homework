@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvBreakfast = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelAge = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.dgvDinner = new System.Windows.Forms.DataGridView();
+            this.dgvSnack = new System.Windows.Forms.DataGridView();
+            this.dgvEveningDinner = new System.Windows.Forms.DataGridView();
+            this.pbBMR = new System.Windows.Forms.ProgressBar();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbCount = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbBmr = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dtpChoose = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnEditUserProd = new System.Windows.Forms.Button();
@@ -56,26 +56,30 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tbWeightProd = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cbProducts = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBreakfast)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDinner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSnack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEveningDinner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView3
+            // dgvBreakfast
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(12, 50);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(240, 162);
-            this.dataGridView3.TabIndex = 31;
+            this.dgvBreakfast.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.dgvBreakfast.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBreakfast.Location = new System.Drawing.Point(12, 50);
+            this.dgvBreakfast.Name = "dgvBreakfast";
+            this.dgvBreakfast.RowHeadersWidth = 51;
+            this.dgvBreakfast.RowTemplate.Height = 24;
+            this.dgvBreakfast.Size = new System.Drawing.Size(240, 162);
+            this.dgvBreakfast.TabIndex = 31;
             // 
             // label3
             // 
@@ -121,71 +125,72 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "Перекус";
             // 
-            // dataGridView5
+            // dgvDinner
             // 
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(270, 51);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersWidth = 51;
-            this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(240, 162);
-            this.dataGridView5.TabIndex = 45;
+            this.dgvDinner.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.dgvDinner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDinner.Location = new System.Drawing.Point(270, 51);
+            this.dgvDinner.Name = "dgvDinner";
+            this.dgvDinner.RowHeadersWidth = 51;
+            this.dgvDinner.RowTemplate.Height = 24;
+            this.dgvDinner.Size = new System.Drawing.Size(240, 162);
+            this.dgvDinner.TabIndex = 45;
             // 
-            // dataGridView1
+            // dgvSnack
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(270, 259);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 162);
-            this.dataGridView1.TabIndex = 53;
+            this.dgvSnack.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.dgvSnack.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSnack.Location = new System.Drawing.Point(270, 259);
+            this.dgvSnack.Name = "dgvSnack";
+            this.dgvSnack.RowHeadersWidth = 51;
+            this.dgvSnack.RowTemplate.Height = 24;
+            this.dgvSnack.Size = new System.Drawing.Size(240, 162);
+            this.dgvSnack.TabIndex = 53;
             // 
-            // dataGridView2
+            // dgvEveningDinner
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 259);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(240, 162);
-            this.dataGridView2.TabIndex = 54;
+            this.dgvEveningDinner.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(208)))), ((int)(((byte)(213)))));
+            this.dgvEveningDinner.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEveningDinner.Location = new System.Drawing.Point(12, 259);
+            this.dgvEveningDinner.Name = "dgvEveningDinner";
+            this.dgvEveningDinner.RowHeadersWidth = 51;
+            this.dgvEveningDinner.RowTemplate.Height = 24;
+            this.dgvEveningDinner.Size = new System.Drawing.Size(240, 162);
+            this.dgvEveningDinner.TabIndex = 54;
             // 
-            // progressBar1
+            // pbBMR
             // 
-            this.progressBar1.Location = new System.Drawing.Point(523, 185);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(192, 28);
-            this.progressBar1.TabIndex = 59;
+            this.pbBMR.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.pbBMR.Location = new System.Drawing.Point(523, 146);
+            this.pbBMR.Name = "pbBMR";
+            this.pbBMR.Size = new System.Drawing.Size(192, 28);
+            this.pbBMR.TabIndex = 59;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(519, 137);
+            this.label4.Location = new System.Drawing.Point(519, 98);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 18);
             this.label4.TabIndex = 60;
             this.label4.Text = "Осталось:";
             // 
-            // label5
+            // lbCount
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(606, 137);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 18);
-            this.label5.TabIndex = 61;
-            this.label5.Text = "bmr";
+            this.lbCount.AutoSize = true;
+            this.lbCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbCount.Location = new System.Drawing.Point(606, 98);
+            this.lbCount.Name = "lbCount";
+            this.lbCount.Size = new System.Drawing.Size(34, 18);
+            this.lbCount.TabIndex = 61;
+            this.lbCount.Text = "bmr";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(653, 137);
+            this.label6.Location = new System.Drawing.Point(653, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 18);
             this.label6.TabIndex = 62;
@@ -195,54 +200,55 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(569, 163);
+            this.label7.Location = new System.Drawing.Point(569, 124);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 18);
             this.label7.TabIndex = 60;
             this.label7.Text = "Из:";
             // 
-            // label8
+            // lbBmr
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(606, 163);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 18);
-            this.label8.TabIndex = 61;
-            this.label8.Text = "bmr";
+            this.lbBmr.AutoSize = true;
+            this.lbBmr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbBmr.Location = new System.Drawing.Point(606, 124);
+            this.lbBmr.Name = "lbBmr";
+            this.lbBmr.Size = new System.Drawing.Size(34, 18);
+            this.lbBmr.TabIndex = 61;
+            this.lbBmr.Text = "bmr";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(653, 163);
+            this.label9.Location = new System.Drawing.Point(653, 124);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(68, 18);
             this.label9.TabIndex = 63;
             this.label9.Text = "Калорий";
             // 
-            // dateTimePicker
+            // dtpChoose
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(523, 51);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker.TabIndex = 64;
+            this.dtpChoose.Location = new System.Drawing.Point(523, 51);
+            this.dtpChoose.Name = "dtpChoose";
+            this.dtpChoose.Size = new System.Drawing.Size(200, 22);
+            this.dtpChoose.TabIndex = 64;
+            this.dtpChoose.ValueChanged += new System.EventHandler(this.DtpChoose_ValueChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(513, 288);
+            this.label10.Location = new System.Drawing.Point(541, 294);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(210, 18);
+            this.label10.Size = new System.Drawing.Size(178, 18);
             this.label10.TabIndex = 65;
-            this.label10.Text = "Выберите продукт в таблице";
+            this.label10.Text = "Введите название и вес,";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(595, 307);
+            this.label11.Location = new System.Drawing.Point(595, 312);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(126, 18);
             this.label11.TabIndex = 66;
@@ -288,6 +294,7 @@
             this.btnAddDinner.Size = new System.Drawing.Size(37, 35);
             this.btnAddDinner.TabIndex = 57;
             this.btnAddDinner.UseVisualStyleBackColor = true;
+            this.btnAddDinner.Click += new System.EventHandler(this.BtnAddDinner_Click);
             // 
             // btnAddSnack
             // 
@@ -301,6 +308,7 @@
             this.btnAddSnack.Size = new System.Drawing.Size(37, 35);
             this.btnAddSnack.TabIndex = 56;
             this.btnAddSnack.UseVisualStyleBackColor = true;
+            this.btnAddSnack.Click += new System.EventHandler(this.BtnAddSnack_Click);
             // 
             // btnAddEveningDinner
             // 
@@ -314,6 +322,7 @@
             this.btnAddEveningDinner.Size = new System.Drawing.Size(37, 35);
             this.btnAddEveningDinner.TabIndex = 55;
             this.btnAddEveningDinner.UseVisualStyleBackColor = true;
+            this.btnAddEveningDinner.Click += new System.EventHandler(this.BtnAddEveningDinner_Click);
             // 
             // AddBreakfast
             // 
@@ -327,6 +336,7 @@
             this.AddBreakfast.Size = new System.Drawing.Size(37, 35);
             this.AddBreakfast.TabIndex = 52;
             this.AddBreakfast.UseVisualStyleBackColor = true;
+            this.AddBreakfast.Click += new System.EventHandler(this.AddBreakfast_Click);
             // 
             // pictureBox4
             // 
@@ -368,46 +378,85 @@
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
+            // tbWeightProd
+            // 
+            this.tbWeightProd.Location = new System.Drawing.Point(522, 259);
+            this.tbWeightProd.Name = "tbWeightProd";
+            this.tbWeightProd.Size = new System.Drawing.Size(193, 22);
+            this.tbWeightProd.TabIndex = 70;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(521, 190);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 18);
+            this.label12.TabIndex = 71;
+            this.label12.Text = "Название:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(521, 238);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(38, 18);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "Вес:";
+            // 
+            // cbProducts
+            // 
+            this.cbProducts.FormattingEnabled = true;
+            this.cbProducts.Location = new System.Drawing.Point(522, 211);
+            this.cbProducts.Name = "cbProducts";
+            this.cbProducts.Size = new System.Drawing.Size(191, 24);
+            this.cbProducts.TabIndex = 73;
+            // 
             // FormDiary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(744, 426);
+            this.Controls.Add(this.cbProducts);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.tbWeightProd);
             this.Controls.Add(this.btnDeleteUserProd);
             this.Controls.Add(this.btnEditUserProd);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.dateTimePicker);
+            this.Controls.Add(this.dtpChoose);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbBmr);
+            this.Controls.Add(this.lbCount);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.pbBMR);
             this.Controls.Add(this.btnAddDinner);
             this.Controls.Add(this.btnAddSnack);
             this.Controls.Add(this.btnAddEveningDinner);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvEveningDinner);
+            this.Controls.Add(this.dgvSnack);
             this.Controls.Add(this.AddBreakfast);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dataGridView5);
+            this.Controls.Add(this.dgvDinner);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.dgvBreakfast);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelAge);
             this.Controls.Add(this.label3);
             this.Name = "FormDiary";
             this.Text = "Дневник калорий";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBreakfast)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDinner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSnack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEveningDinner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -418,33 +467,37 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvBreakfast;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelAge;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dgvDinner;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button AddBreakfast;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvSnack;
+        private System.Windows.Forms.DataGridView dgvEveningDinner;
         private System.Windows.Forms.Button btnAddEveningDinner;
         private System.Windows.Forms.Button btnAddSnack;
         private System.Windows.Forms.Button btnAddDinner;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar pbBMR;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbCount;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbBmr;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private System.Windows.Forms.DateTimePicker dtpChoose;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnEditUserProd;
         private System.Windows.Forms.Button btnDeleteUserProd;
+        private System.Windows.Forms.TextBox tbWeightProd;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cbProducts;
     }
 }

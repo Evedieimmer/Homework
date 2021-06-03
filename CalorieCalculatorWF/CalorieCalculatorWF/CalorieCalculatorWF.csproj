@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiaryPresenter.cs" />
     <Compile Include="MainForms\FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +138,7 @@
     <Compile Include="Products.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Presenters\ProductsPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Presenters\RegistrationPresenter.cs" />
@@ -163,6 +165,7 @@
     <Compile Include="UserMenu.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Presenters\UsersPresenter.cs" />
     <EmbeddedResource Include="MainForms\FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>

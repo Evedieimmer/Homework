@@ -33,14 +33,17 @@
             this.btnAddProd = new System.Windows.Forms.Button();
             this.btnOnlyEat = new System.Windows.Forms.Button();
             this.btnOnlyDrink = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbNameProd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbCalorie = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbFood = new System.Windows.Forms.RadioButton();
+            this.rbDrink = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAllProduct = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvProducts
@@ -73,12 +76,13 @@
             this.btnAddProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddProd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAddProd.Location = new System.Drawing.Point(511, 297);
+            this.btnAddProd.Location = new System.Drawing.Point(511, 310);
             this.btnAddProd.Name = "btnAddProd";
             this.btnAddProd.Size = new System.Drawing.Size(213, 35);
             this.btnAddProd.TabIndex = 50;
             this.btnAddProd.Text = "Добавить";
             this.btnAddProd.UseVisualStyleBackColor = true;
+            this.btnAddProd.Click += new System.EventHandler(this.BtnAddProd_Click);
             // 
             // btnOnlyEat
             // 
@@ -93,6 +97,7 @@
             this.btnOnlyEat.TabIndex = 51;
             this.btnOnlyEat.Text = "Только продукты";
             this.btnOnlyEat.UseVisualStyleBackColor = true;
+            this.btnOnlyEat.Click += new System.EventHandler(this.BtnOnlyEat_Click);
             // 
             // btnOnlyDrink
             // 
@@ -107,13 +112,14 @@
             this.btnOnlyDrink.TabIndex = 52;
             this.btnOnlyDrink.Text = "Только напитки";
             this.btnOnlyDrink.UseVisualStyleBackColor = true;
+            this.btnOnlyDrink.Click += new System.EventHandler(this.BtnOnlyDrink_Click);
             // 
-            // textBox1
+            // tbNameProd
             // 
-            this.textBox1.Location = new System.Drawing.Point(511, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(213, 22);
-            this.textBox1.TabIndex = 53;
+            this.tbNameProd.Location = new System.Drawing.Point(511, 161);
+            this.tbNameProd.Name = "tbNameProd";
+            this.tbNameProd.Size = new System.Drawing.Size(213, 22);
+            this.tbNameProd.TabIndex = 53;
             // 
             // label4
             // 
@@ -125,12 +131,12 @@
             this.label4.TabIndex = 61;
             this.label4.Text = "название:";
             // 
-            // textBox2
+            // tbCalorie
             // 
-            this.textBox2.Location = new System.Drawing.Point(511, 207);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 22);
-            this.textBox2.TabIndex = 62;
+            this.tbCalorie.Location = new System.Drawing.Point(511, 207);
+            this.tbCalorie.Name = "tbCalorie";
+            this.tbCalorie.Size = new System.Drawing.Size(213, 22);
+            this.tbCalorie.TabIndex = 62;
             // 
             // label1
             // 
@@ -142,27 +148,27 @@
             this.label1.TabIndex = 63;
             this.label1.Text = "содержание калорий в 100г:";
             // 
-            // radioButton1
+            // rbFood
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(511, 236);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(83, 21);
-            this.radioButton1.TabIndex = 64;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "напиток";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbFood.AutoSize = true;
+            this.rbFood.Location = new System.Drawing.Point(3, 3);
+            this.rbFood.Name = "rbFood";
+            this.rbFood.Size = new System.Drawing.Size(83, 21);
+            this.rbFood.TabIndex = 64;
+            this.rbFood.TabStop = true;
+            this.rbFood.Text = "напиток";
+            this.rbFood.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbDrink
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(511, 263);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(82, 21);
-            this.radioButton2.TabIndex = 65;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "продукт";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbDrink.AutoSize = true;
+            this.rbDrink.Location = new System.Drawing.Point(3, 30);
+            this.rbDrink.Name = "rbDrink";
+            this.rbDrink.Size = new System.Drawing.Size(82, 21);
+            this.rbDrink.TabIndex = 65;
+            this.rbDrink.TabStop = true;
+            this.rbDrink.Text = "продукт";
+            this.rbDrink.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -175,19 +181,43 @@
             this.label3.TabIndex = 66;
             this.label3.Text = "Добавь свой продукт";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rbFood);
+            this.panel1.Controls.Add(this.rbDrink);
+            this.panel1.Location = new System.Drawing.Point(511, 235);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(105, 57);
+            this.panel1.TabIndex = 67;
+            // 
+            // btnAllProduct
+            // 
+            this.btnAllProduct.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAllProduct.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnAllProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAllProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAllProduct.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAllProduct.Location = new System.Drawing.Point(511, 12);
+            this.btnAllProduct.Name = "btnAllProduct";
+            this.btnAllProduct.Size = new System.Drawing.Size(213, 32);
+            this.btnAllProduct.TabIndex = 68;
+            this.btnAllProduct.Text = "Показать весь список";
+            this.btnAllProduct.UseVisualStyleBackColor = true;
+            this.btnAllProduct.Click += new System.EventHandler(this.BtnAllProduct_Click);
+            // 
             // FormProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(744, 426);
+            this.Controls.Add(this.btnAllProduct);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbCalorie);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbNameProd);
             this.Controls.Add(this.btnOnlyDrink);
             this.Controls.Add(this.btnOnlyEat);
             this.Controls.Add(this.btnAddProd);
@@ -197,6 +227,8 @@
             this.Text = "Продукты и напитки";
             this.Load += new System.EventHandler(this.FormProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,12 +241,14 @@
         private System.Windows.Forms.Button btnAddProd;
         private System.Windows.Forms.Button btnOnlyEat;
         private System.Windows.Forms.Button btnOnlyDrink;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbNameProd;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbCalorie;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbFood;
+        private System.Windows.Forms.RadioButton rbDrink;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnAllProduct;
     }
 }
