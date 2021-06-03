@@ -21,5 +21,9 @@ namespace CalorieCalculatorWF.Forms
         }
 
 
+        private void BtnShowChart_Click(object sender, EventArgs e)
+        {
+            dgvValues.DataSource = reportPresenter.GetChartValues(dtpBegin.Value, dtpEnd.Value);
+        }
     }
 }

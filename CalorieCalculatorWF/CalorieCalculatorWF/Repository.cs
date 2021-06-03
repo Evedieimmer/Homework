@@ -9,6 +9,11 @@ namespace CalorieCalculatorWF
         public string NameProd { get; set; }
         public int Calorie { get; set; }
     }
+    public class ChartValue
+    {
+        public DateTime dateDiary { get; set; }
+        public int? calorieDay { get; set; }
+    }
     public class UserModel
     {
         public int Id { get; set; }
@@ -27,30 +32,6 @@ namespace CalorieCalculatorWF
 
         public class Repository
     {
-        //public List<LifeStyle> lifeStyleModels = new List<LifeStyle>();//справочник
-        //public List<Gender> genderModels = new List<Gender>();//справочник
-        //public List<Products> productsModels = new List<Products>();
-        //public List<TypeEating> typeEatingModels = new List<TypeEating>();//справочник
-        //public List<TypeProduct> typeProductModels = new List<TypeProduct>();//справочник
-        //public List<UserInfo> userInfoModels = new List<UserInfo>();
-        //public List<UserMenu> userMenuModels = new List<UserMenu>();
-        //public List<PassStore> passStoreModels = new List<PassStore>();
-
-        //public Repository()
-        //{
-        //    using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
-        //    {
-        //        genderModels = db.Gender.ToList();
-        //        lifeStyleModels = db.LifeStyle.ToList();
-        //        productsModels = db.Products.ToList();
-        //        typeEatingModels = db.TypeEating.ToList();
-        //        typeProductModels = db.TypeProduct.ToList();
-        //        userInfoModels = db.UserInfo.ToList();
-        //        userMenuModels = db.UserMenu.ToList();
-        //        passStoreModels = db.PassStore.ToList();
-        //    }
-        //}
-
         public void AddProduct(string name, int calorie, int type)
         {
             using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
@@ -467,5 +448,6 @@ namespace CalorieCalculatorWF
                 return prod;
             }
         }
+
     }
 }
