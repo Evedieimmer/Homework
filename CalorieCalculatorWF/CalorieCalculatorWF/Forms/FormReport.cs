@@ -12,9 +12,14 @@ namespace CalorieCalculatorWF.Forms
 {
     public partial class FormReport : Form
     {
+        public ReportPresenter reportPresenter;
         public FormReport()
         {
             InitializeComponent();
+            Repository repository = new Repository();
+            reportPresenter = new ReportPresenter(this, repository);
         }
+
+
     }
 }

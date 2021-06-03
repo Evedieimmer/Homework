@@ -31,25 +31,78 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.chartReport = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnShowChart = new System.Windows.Forms.Button();
+            this.dtpBegin = new System.Windows.Forms.DateTimePicker();
+            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.chartReport)).BeginInit();
             this.SuspendLayout();
             // 
-            // chart1
+            // chartReport
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chartReport.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 12);
-            this.chart1.Name = "chart1";
+            this.chartReport.Legends.Add(legend1);
+            this.chartReport.Location = new System.Drawing.Point(12, 12);
+            this.chartReport.Name = "chartReport";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(720, 390);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.chartReport.Series.Add(series1);
+            this.chartReport.Size = new System.Drawing.Size(720, 347);
+            this.chartReport.TabIndex = 0;
+            this.chartReport.Text = "chart1";
+            // 
+            // btnShowChart
+            // 
+            this.btnShowChart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnShowChart.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.btnShowChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnShowChart.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnShowChart.Location = new System.Drawing.Point(540, 379);
+            this.btnShowChart.Name = "btnShowChart";
+            this.btnShowChart.Size = new System.Drawing.Size(192, 35);
+            this.btnShowChart.TabIndex = 68;
+            this.btnShowChart.Text = "Посмотреть отчет";
+            this.btnShowChart.UseVisualStyleBackColor = true;
+            // 
+            // dtpBegin
+            // 
+            this.dtpBegin.Location = new System.Drawing.Point(22, 392);
+            this.dtpBegin.Name = "dtpBegin";
+            this.dtpBegin.Size = new System.Drawing.Size(200, 22);
+            this.dtpBegin.TabIndex = 69;
+            // 
+            // dtpEnd
+            // 
+            this.dtpEnd.Location = new System.Drawing.Point(274, 392);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(200, 22);
+            this.dtpEnd.TabIndex = 70;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(19, 362);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(169, 18);
+            this.label4.TabIndex = 71;
+            this.label4.Text = "Выберите дату начала:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(271, 362);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(194, 18);
+            this.label1.TabIndex = 72;
+            this.label1.Text = "Выберите дату окончания:";
             // 
             // FormReport
             // 
@@ -57,16 +110,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(744, 426);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dtpEnd);
+            this.Controls.Add(this.dtpBegin);
+            this.Controls.Add(this.btnShowChart);
+            this.Controls.Add(this.chartReport);
             this.Name = "FormReport";
             this.Text = "Отчеты";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartReport)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartReport;
+        private System.Windows.Forms.Button btnShowChart;
+        private System.Windows.Forms.DateTimePicker dtpBegin;
+        private System.Windows.Forms.DateTimePicker dtpEnd;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
     }
 }

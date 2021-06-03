@@ -182,11 +182,22 @@ namespace CalorieCalculatorWF
             }
         }
 
-        public void RemoveMenu(UserMenu menu)
+        public void RemoveMenu(DateTime date, string nameProd, int calorie, int weight, int typeEat, int userid)
         {
             using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
             {
+                Products prod = db.Products.FirstOrDefault(x => x.NameProduct == nameProd);
+                int idProd = prod.ProductsId;
+                UserMenu menu = db.UserMenu.Where(x => x.Date == date)
+                    .Where(x => x.ProductsId == idProd)
+                    .Where(x => x.UserId == IdUser.Id)
+                    .Where(x => x.WeightProduct == weight)
+                    .Where(x => x.Calorie == calorie)
+                    .Where(x => x.TypeEatingId == typeEat)
+                    .FirstOrDefault();
+
                 db.UserMenu.Remove(menu);
+                db.SaveChanges();
             }
         }
 
@@ -196,16 +207,6 @@ namespace CalorieCalculatorWF
             {
                 Products prod = db.Products.FirstOrDefault(x => x.NameProduct == nameProd);
                 db.Products.Remove(prod);
-                db.SaveChanges();
-            }
-        }
-
-        public void ChangeMenu(UserMenu menu, int calorie, int weight)
-        {
-            using (CalorieCalculatorDBEntities1 db = new CalorieCalculatorDBEntities1())
-            {
-                menu.WeightProduct = weight;
-                menu.Calorie = calorie;
                 db.SaveChanges();
             }
         }

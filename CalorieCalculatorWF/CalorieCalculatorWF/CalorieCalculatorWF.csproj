@@ -142,6 +142,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Presenters\RegistrationPresenter.cs" />
+    <Compile Include="ReportPresenter.cs" />
     <Compile Include="Repository.cs" />
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -307,6 +308,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icons8-минус-30.png" />
     <None Include="Resources\fruits1.png" />
   </ItemGroup>
   <ItemGroup />

@@ -117,5 +117,49 @@ namespace CalorieCalculatorWF.Forms
             LabelBMR();
             ChangeProgressBar();
         }
+
+        private void BtnDeleteBreakfast_Click(object sender, EventArgs e)
+        {
+            diaryPresenter.RemoveFromMenu(dtpChoose,
+                dgvBreakfast.SelectedCells[0].Value.ToString(),
+                int.Parse(dgvBreakfast.SelectedCells[1].Value.ToString()),
+                int.Parse(dgvBreakfast.SelectedCells[2].Value.ToString()), 1);
+            diaryPresenter.LoadBreakfast(dtpChoose);
+            LabelBMR();
+            ChangeProgressBar();
+        }
+
+        private void BtnDeleteDinner_Click(object sender, EventArgs e)
+        {
+            diaryPresenter.RemoveFromMenu(dtpChoose,
+               dgvDinner.SelectedCells[0].Value.ToString(),
+               int.Parse(dgvDinner.SelectedCells[1].Value.ToString()),
+               int.Parse(dgvDinner.SelectedCells[2].Value.ToString()), 2);
+            diaryPresenter.LoadDinner(dtpChoose);
+            LabelBMR();
+            ChangeProgressBar();
+        }
+
+        private void BtnDeleteEveningDinner_Click(object sender, EventArgs e)
+        {
+            diaryPresenter.RemoveFromMenu(dtpChoose,
+               dgvEveningDinner.SelectedCells[0].Value.ToString(),
+               int.Parse(dgvEveningDinner.SelectedCells[1].Value.ToString()),
+               int.Parse(dgvEveningDinner.SelectedCells[2].Value.ToString()), 3);
+            diaryPresenter.LoadEneningDinner(dtpChoose);
+            LabelBMR();
+            ChangeProgressBar();
+        }
+
+        private void BtnDeleteSnack_Click(object sender, EventArgs e)
+        {
+            diaryPresenter.RemoveFromMenu(dtpChoose,
+              dgvSnack.SelectedCells[0].Value.ToString(),
+              int.Parse(dgvSnack.SelectedCells[1].Value.ToString()),
+              int.Parse(dgvSnack.SelectedCells[2].Value.ToString()), 4);
+            diaryPresenter.LoadSnack(dtpChoose);
+            LabelBMR();
+            ChangeProgressBar();
+        }
     }
 }

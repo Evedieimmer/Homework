@@ -20,6 +20,13 @@ namespace CalorieCalculatorWF
             View = view;
         }
 
+        public void RemoveFromMenu(DateTimePicker date, string nameProd, int calorie, int weight, int typeEat)
+        {
+            DateTime dateEat = DateTime.Parse(date.Value.ToShortDateString());
+            Repository.RemoveMenu(dateEat, nameProd, calorie, weight, typeEat, IdUser.Id);
+            //RemoveMenu(DateTime date, string nameProd, int calorie, int weight, int typeEat, int userid)
+        }
+
         public void AddProdInMenu(DateTimePicker date, ComboBox prod, TextBox weight, int type)
         {
             DateTime dateEat = DateTime.Parse(date.Value.ToShortDateString());
