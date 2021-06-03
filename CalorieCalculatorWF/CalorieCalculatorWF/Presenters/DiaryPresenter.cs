@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CalorieCalculatorWF.Forms;
+﻿using CalorieCalculatorWF.Forms;
+using System;
 using System.Windows.Forms;
 
 
@@ -40,6 +36,15 @@ namespace CalorieCalculatorWF
                 return;
             }
             int calorieEat = (calorieProd * wei) / 100;
+
+            int? bmr = UserBmr();
+            int? summ = Repository.GetSummBmr(IdUser.Id, dateEat);
+            int? newSumm = summ + calorieEat;
+            if(newSumm > bmr)
+            {
+                MessageBox.Show("Вам не стоит это есть, осталось мало калорий!", "Ошибка!");
+                return;
+            }
             Repository.AddMenu(dateEat, type, prodId, IdUser.Id, calorieEat, wei);
         }
 

@@ -80,6 +80,11 @@ namespace CalorieCalculatorWF.Forms
             {
                 diaryPresenter.AddProdInMenu(dtpChoose, cbProducts, tbWeightProd, 1);
             }
+            else
+            {
+                MessageBox.Show("Заполните поля!", "Ошибка!");
+                return;
+            }
             diaryPresenter.LoadBreakfast(dtpChoose);
             LabelBMR();
             ChangeProgressBar();
@@ -90,6 +95,11 @@ namespace CalorieCalculatorWF.Forms
             if (cbProducts.Text.Trim() != "" && tbWeightProd.Text.Trim() != "")
             {
                 diaryPresenter.AddProdInMenu(dtpChoose, cbProducts, tbWeightProd, 2);
+            }
+            else
+            {
+                MessageBox.Show("Заполните поля!", "Ошибка!");
+                return;
             }
             diaryPresenter.LoadDinner(dtpChoose);
             LabelBMR();
@@ -102,6 +112,11 @@ namespace CalorieCalculatorWF.Forms
             {
                 diaryPresenter.AddProdInMenu(dtpChoose, cbProducts, tbWeightProd, 3);
             }
+            else
+            {
+                MessageBox.Show("Заполните поля!", "Ошибка!");
+                return;
+            }
             diaryPresenter.LoadEneningDinner(dtpChoose);
             LabelBMR();
             ChangeProgressBar();
@@ -112,6 +127,11 @@ namespace CalorieCalculatorWF.Forms
             if (cbProducts.Text.Trim() != "" && tbWeightProd.Text.Trim() != "")
             {
                 diaryPresenter.AddProdInMenu(dtpChoose, cbProducts, tbWeightProd, 4);
+            }
+            else
+            {
+                MessageBox.Show("Заполните поля!", "Ошибка!");
+                return;
             }
             diaryPresenter.LoadSnack(dtpChoose);
             LabelBMR();

@@ -23,7 +23,14 @@ namespace CalorieCalculatorWF.Forms
 
         private void BtnShowChart_Click(object sender, EventArgs e)
         {
-            dgvValues.DataSource = reportPresenter.GetChartValues(dtpBegin.Value, dtpEnd.Value);
+            DateTime min = DateTime.Parse(dtpBegin.Value.ToShortDateString());
+            DateTime max = DateTime.Parse(dtpEnd.Value.ToShortDateString());
+            List<DateTime> dates = reportPresenter.DateList(min, max);
+            List<int?> bmr = reportPresenter.BmrCount(dates);
+            for (int i = 0; i < dates.Count; i++)
+            {
+                chartReport.Series[0].Points.AddXY(dates[i], bmr[i]);
+            }
         }
     }
 }
