@@ -18,6 +18,7 @@ namespace CalorieCalculatorWF
             int idPass = Repository.SearchPassId(pass, log);
             return idPass;
         }
+        
 
         public void AddUser(TextBox name, TextBox age, TextBox weight, TextBox height, RadioButton gender, RadioButton lifestyle, TextBox pass, TextBox log)
         {

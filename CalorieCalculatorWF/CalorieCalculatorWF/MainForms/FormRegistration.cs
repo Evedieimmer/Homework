@@ -65,6 +65,7 @@ namespace CalorieCalculatorWF
             RadioButton style = RbLifeStyle(rbStyle1, rbStyle2, rbStyle3, rbStyle4);
             RadioButton gen = RbGender(rbFemale, rbMale);
             registrationPresenter.AddUser(tbNewName, tbNewAge, tbNewWeight, tbNewHeight, gen, style, tbNewPass, tbNewLogin);
+            this.Close();
         }
     }
 }

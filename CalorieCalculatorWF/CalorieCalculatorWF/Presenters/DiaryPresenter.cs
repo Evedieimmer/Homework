@@ -45,6 +45,7 @@ namespace CalorieCalculatorWF
                 MessageBox.Show("Вам не стоит это есть, осталось мало калорий!", "Ошибка!");
                 return;
             }
+
             Repository.AddMenu(dateEat, type, prodId, IdUser.Id, calorieEat, wei);
         }
 
@@ -63,15 +64,15 @@ namespace CalorieCalculatorWF
         public int BmrCount(DateTimePicker date)
         {
             DateTime dateEat = DateTime.Parse(date.Value.ToShortDateString());
-            int? bmr = UserBmr();
-            int? summ = Repository.GetSummBmr(IdUser.Id, dateEat);
-            int? bmrBalance = bmr - summ;
+            int? bmr = UserBmr();//суточная норма 1200
+            int? summ = Repository.GetSummBmr(IdUser.Id, dateEat);//калории за день
+            int? bmrBalance = bmr - summ;//остаток на сегодня
             int nowBmr;
             if (!int.TryParse(bmrBalance.ToString(), out nowBmr))
             {
                 return UserBmr();
             }
-            return nowBmr;
+            return nowBmr;//остаток на сегодня
         }
         public void LoadProducts()
         {

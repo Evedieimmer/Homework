@@ -34,10 +34,18 @@ namespace CalorieCalculatorWF.Forms
         }
         public void ChangeProgressBar()
         {
-            pbBMR.Maximum = diaryPresenter.UserBmr();
+            pbBMR.Maximum = diaryPresenter.UserBmr();// суточная норма
             pbBMR.Minimum = 0;
-            pbBMR.Step += 1;//to doo
-            pbBMR.Value = diaryPresenter.BmrCount(dtpChoose);
+            pbBMR.Step += 1;
+            int val = diaryPresenter.BmrCount(dtpChoose);// осталось на сегодня
+            if (val <= 0)
+            {
+                pbBMR.Value = diaryPresenter.UserBmr();
+            }
+            else
+            {
+                pbBMR.Value = diaryPresenter.UserBmr() - diaryPresenter.BmrCount(dtpChoose);
+            }
         }
         public void LoadInComboBox(List<string> prod)
         {

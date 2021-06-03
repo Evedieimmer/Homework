@@ -63,9 +63,11 @@
             this.lbIcon = new System.Windows.Forms.Label();
             this.pictureFruit = new System.Windows.Forms.PictureBox();
             this.panelFruits = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelEditUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFruit)).BeginInit();
             this.panelFruits.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelName
@@ -82,67 +84,73 @@
             // 
             this.labelAge.AutoSize = true;
             this.labelAge.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelAge.Location = new System.Drawing.Point(242, 171);
+            this.labelAge.Location = new System.Drawing.Point(226, 9);
             this.labelAge.Name = "labelAge";
             this.labelAge.Size = new System.Drawing.Size(35, 18);
             this.labelAge.TabIndex = 1;
             this.labelAge.Text = "Age";
+            this.labelAge.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelWeight
             // 
             this.labelWeight.AutoSize = true;
             this.labelWeight.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWeight.Location = new System.Drawing.Point(221, 302);
+            this.labelWeight.Location = new System.Drawing.Point(226, 141);
             this.labelWeight.Name = "labelWeight";
             this.labelWeight.Size = new System.Drawing.Size(58, 18);
             this.labelWeight.TabIndex = 2;
             this.labelWeight.Text = "Weight";
+            this.labelWeight.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // labelHeight
             // 
             this.labelHeight.AutoSize = true;
             this.labelHeight.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelHeight.Location = new System.Drawing.Point(226, 259);
+            this.labelHeight.Location = new System.Drawing.Point(226, 97);
             this.labelHeight.Name = "labelHeight";
             this.labelHeight.Size = new System.Drawing.Size(53, 18);
             this.labelHeight.TabIndex = 3;
             this.labelHeight.Text = "Height";
+            this.labelHeight.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelGender
             // 
             this.labelGender.AutoSize = true;
             this.labelGender.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelGender.Location = new System.Drawing.Point(221, 213);
+            this.labelGender.Location = new System.Drawing.Point(226, 51);
             this.labelGender.Name = "labelGender";
             this.labelGender.Size = new System.Drawing.Size(59, 18);
             this.labelGender.TabIndex = 4;
             this.labelGender.Text = "Gender";
+            this.labelGender.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelBMR
             // 
             this.labelBMR.AutoSize = true;
             this.labelBMR.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBMR.Location = new System.Drawing.Point(242, 392);
+            this.labelBMR.Location = new System.Drawing.Point(226, 232);
             this.labelBMR.Name = "labelBMR";
             this.labelBMR.Size = new System.Drawing.Size(39, 18);
             this.labelBMR.TabIndex = 6;
             this.labelBMR.Text = "BMR";
+            this.labelBMR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelBMI
             // 
             this.labelBMI.AutoSize = true;
             this.labelBMI.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBMI.Location = new System.Drawing.Point(247, 348);
+            this.labelBMI.Location = new System.Drawing.Point(226, 189);
             this.labelBMI.Name = "labelBMI";
             this.labelBMI.Size = new System.Drawing.Size(34, 18);
             this.labelBMI.TabIndex = 7;
             this.labelBMI.Text = "BMI";
+            this.labelBMI.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(22, 171);
+            this.label2.Location = new System.Drawing.Point(10, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 18);
             this.label2.TabIndex = 9;
@@ -152,7 +160,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(22, 213);
+            this.label3.Location = new System.Drawing.Point(10, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 18);
             this.label3.TabIndex = 10;
@@ -162,7 +170,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(22, 302);
+            this.label1.Location = new System.Drawing.Point(10, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 18);
             this.label1.TabIndex = 11;
@@ -172,7 +180,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(22, 259);
+            this.label4.Location = new System.Drawing.Point(10, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 18);
             this.label4.TabIndex = 12;
@@ -182,7 +190,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(22, 348);
+            this.label5.Location = new System.Drawing.Point(10, 189);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 18);
             this.label5.TabIndex = 13;
@@ -192,7 +200,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MS Reference Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(22, 392);
+            this.label6.Location = new System.Drawing.Point(10, 233);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(197, 18);
             this.label6.TabIndex = 14;
@@ -408,30 +416,38 @@
             this.panelFruits.Size = new System.Drawing.Size(420, 340);
             this.panelFruits.TabIndex = 22;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.labelBMI);
+            this.panel1.Controls.Add(this.labelBMR);
+            this.panel1.Controls.Add(this.labelGender);
+            this.panel1.Controls.Add(this.labelHeight);
+            this.panel1.Controls.Add(this.labelWeight);
+            this.panel1.Controls.Add(this.labelAge);
+            this.panel1.Location = new System.Drawing.Point(12, 159);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(308, 264);
+            this.panel1.TabIndex = 23;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(744, 426);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelFruits);
             this.Controls.Add(this.panelEditUser);
             this.Controls.Add(this.btnEditUser);
             this.Controls.Add(this.btnIcon);
             this.Controls.Add(this.lbIcon);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.labelBMI);
-            this.Controls.Add(this.labelBMR);
-            this.Controls.Add(this.labelGender);
-            this.Controls.Add(this.labelHeight);
-            this.Controls.Add(this.labelWeight);
-            this.Controls.Add(this.labelAge);
             this.Controls.Add(this.labelName);
             this.Name = "FormHome";
             this.Text = "Главная";
@@ -439,6 +455,8 @@
             this.panelEditUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureFruit)).EndInit();
             this.panelFruits.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,5 +497,6 @@
         private System.Windows.Forms.Button btSaveUser;
         private System.Windows.Forms.PictureBox pictureFruit;
         private System.Windows.Forms.Panel panelFruits;
+        private System.Windows.Forms.Panel panel1;
     }
 }
