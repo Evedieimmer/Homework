@@ -1,4 +1,4 @@
-# Приложения Calorie Calculator
+# Приложения Calorie Calculator WF
 БД локальная, используется СУБД SQL Server
 
 # основной функционал:
